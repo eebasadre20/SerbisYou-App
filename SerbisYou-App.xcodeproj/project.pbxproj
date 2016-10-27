@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312B7834A69EB2DD743D314B /* Pods_SerbisYou_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777F049800443D4B5EB389AB /* Pods_SerbisYou_App.framework */; };
+		55A96B0DCB113AFDBAFFF4D4 /* Pods_SerbisYou_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */; };
+		BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */; };
 		C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A01DC2178A001209E0 /* AppDelegate.swift */; };
 		C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A21DC2178A001209E0 /* ViewController.swift */; };
 		C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A41DC2178A001209E0 /* Main.storyboard */; };
@@ -14,6 +17,12 @@
 		C97AD5AB1DC2178A001209E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */; };
 		C97AD5B61DC2178A001209E0 /* SerbisYou_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */; };
 		C97AD5C11DC2178A001209E0 /* SerbisYou_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */; };
+		C97AD5CF1DC218B3001209E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */; };
+		C97AD5E41DC22BCC001209E0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E01DC22BCC001209E0 /* Bolts.framework */; };
+		C97AD5E51DC22BCC001209E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */; };
+		C97AD5E61DC22BCC001209E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */; };
+		C97AD5E71DC22BCC001209E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */; };
+		C97AD5E91DC2472E001209E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5E81DC2472E001209E0 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0038DE1030C309E3C1747422 /* Pods-SerbisYou-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		05FB97F65BBA73682EB70302 /* Pods-SerbisYou-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-AppTests/Pods-SerbisYou-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		285241CEF71606320923BD83 /* Pods-SerbisYou-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App.debug.xcconfig"; sourceTree = "<group>"; };
+		2ED484B67628E7523EB9F0D2 /* Pods-SerbisYou-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-AppTests/Pods-SerbisYou-AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		777F049800443D4B5EB389AB /* Pods_SerbisYou_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		830D096A30D8E2F8CD5ACC0C /* Pods-SerbisYou-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD59D1DC21789001209E0 /* SerbisYou-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SerbisYou-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD5A01DC2178A001209E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C97AD5A21DC2178A001209E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C97AD5A21DC2178A001209E0 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; wrapsLines = 1; };
 		C97AD5A51DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97AD5A71DC2178A001209E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97AD5AA1DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +63,14 @@
 		C97AD5BC1DC2178A001209E0 /* SerbisYou-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerbisYou_AppUITests.swift; sourceTree = "<group>"; };
 		C97AD5C21DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C97AD5E01DC22BCC001209E0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		C97AD5E81DC2472E001209E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App.release.xcconfig"; sourceTree = "<group>"; };
+		DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97AD5E41DC22BCC001209E0 /* Bolts.framework in Frameworks */,
+				C97AD5E51DC22BCC001209E0 /* FBSDKCoreKit.framework in Frameworks */,
+				C97AD5E61DC22BCC001209E0 /* FBSDKLoginKit.framework in Frameworks */,
+				C97AD5E71DC22BCC001209E0 /* FBSDKShareKit.framework in Frameworks */,
+				312B7834A69EB2DD743D314B /* Pods_SerbisYou_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A96B0DCB113AFDBAFFF4D4 /* Pods_SerbisYou_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +98,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7DB49CB2FA1F12F99663D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				285241CEF71606320923BD83 /* Pods-SerbisYou-App.debug.xcconfig */,
+				D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */,
+				05FB97F65BBA73682EB70302 /* Pods-SerbisYou-AppTests.debug.xcconfig */,
+				2ED484B67628E7523EB9F0D2 /* Pods-SerbisYou-AppTests.release.xcconfig */,
+				0038DE1030C309E3C1747422 /* Pods-SerbisYou-AppUITests.debug.xcconfig */,
+				830D096A30D8E2F8CD5ACC0C /* Pods-SerbisYou-AppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C97AD5941DC21789001209E0 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +125,10 @@
 				C97AD5B41DC2178A001209E0 /* SerbisYou-AppTests */,
 				C97AD5BF1DC2178A001209E0 /* SerbisYou-AppUITests */,
 				C97AD59E1DC21789001209E0 /* Products */,
+				4B7DB49CB2FA1F12F99663D1 /* Pods */,
+				FCFC53B8F8F79610CE18F6DB /* Frameworks */,
 			);
+			indentWidth = 3;
 			sourceTree = "<group>";
 		};
 		C97AD59E1DC21789001209E0 /* Products */ = {
@@ -100,8 +147,10 @@
 				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
 				C97AD5A21DC2178A001209E0 /* ViewController.swift */,
 				C97AD5A41DC2178A001209E0 /* Main.storyboard */,
+				C97AD5E81DC2472E001209E0 /* HomeViewController.swift */,
 				C97AD5A71DC2178A001209E0 /* Assets.xcassets */,
 				C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */,
+				C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */,
 				C97AD5AC1DC2178A001209E0 /* Info.plist */,
 			);
 			path = "SerbisYou-App";
@@ -125,6 +174,20 @@
 			path = "SerbisYou-AppUITests";
 			sourceTree = "<group>";
 		};
+		FCFC53B8F8F79610CE18F6DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97AD5E01DC22BCC001209E0 /* Bolts.framework */,
+				C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */,
+				C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */,
+				C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */,
+				777F049800443D4B5EB389AB /* Pods_SerbisYou_App.framework */,
+				DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */,
+				C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97AD5C51DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-App" */;
 			buildPhases = (
+				993BC798E5E87D5BD56B4267 /* [CP] Check Pods Manifest.lock */,
 				C97AD5991DC21789001209E0 /* Sources */,
 				C97AD59A1DC21789001209E0 /* Frameworks */,
 				C97AD59B1DC21789001209E0 /* Resources */,
+				32095901E9E9A32EE096710A /* [CP] Embed Pods Frameworks */,
+				38227E89CB5F3ABFCC47980E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97AD5C81DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppTests" */;
 			buildPhases = (
+				9360A77FDD81A1DF08270A66 /* [CP] Check Pods Manifest.lock */,
 				C97AD5AD1DC2178A001209E0 /* Sources */,
 				C97AD5AE1DC2178A001209E0 /* Frameworks */,
 				C97AD5AF1DC2178A001209E0 /* Resources */,
+				94ADB4BB04602F8AA86F948C /* [CP] Embed Pods Frameworks */,
+				360EF0D37FF3658094128FBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97AD5CB1DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppUITests" */;
 			buildPhases = (
+				5DFFA7E34CA83A8E7FDA5029 /* [CP] Check Pods Manifest.lock */,
 				C97AD5B81DC2178A001209E0 /* Sources */,
 				C97AD5B91DC2178A001209E0 /* Frameworks */,
 				C97AD5BA1DC2178A001209E0 /* Resources */,
+				9DE0ED1226CDFCADDB54D71A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97AD5AB1DC2178A001209E0 /* LaunchScreen.storyboard in Resources */,
+				C97AD5CF1DC218B3001209E0 /* GoogleService-Info.plist in Resources */,
 				C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */,
 				C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +323,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32095901E9E9A32EE096710A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		360EF0D37FF3658094128FBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-AppTests/Pods-SerbisYou-AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38227E89CB5F3ABFCC47980E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DFFA7E34CA83A8E7FDA5029 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9360A77FDD81A1DF08270A66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94ADB4BB04602F8AA86F948C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-AppTests/Pods-SerbisYou-AppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		993BC798E5E87D5BD56B4267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE0ED1226CDFCADDB54D71A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C97AD5991DC21789001209E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,6 +453,7 @@
 			files = (
 				C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */,
 				C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */,
+				C97AD5E91DC2472E001209E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +591,18 @@
 		};
 		C97AD5C61DC2178A001209E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 285241CEF71606320923BD83 /* Pods-SerbisYou-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/piktochart-edsil/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
+				);
 				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
@@ -406,8 +612,18 @@
 		};
 		C97AD5C71DC2178A001209E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/piktochart-edsil/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
+				);
 				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
@@ -417,6 +633,7 @@
 		};
 		C97AD5C91DC2178A001209E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FB97F65BBA73682EB70302 /* Pods-SerbisYou-AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SerbisYou-AppTests/Info.plist";
@@ -429,6 +646,7 @@
 		};
 		C97AD5CA1DC2178A001209E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED484B67628E7523EB9F0D2 /* Pods-SerbisYou-AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SerbisYou-AppTests/Info.plist";
@@ -441,6 +659,7 @@
 		};
 		C97AD5CC1DC2178A001209E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0038DE1030C309E3C1747422 /* Pods-SerbisYou-AppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "SerbisYou-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -453,6 +672,7 @@
 		};
 		C97AD5CD1DC2178A001209E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830D096A30D8E2F8CD5ACC0C /* Pods-SerbisYou-AppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "SerbisYou-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +702,7 @@
 				C97AD5C71DC2178A001209E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97AD5C81DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +711,7 @@
 				C97AD5CA1DC2178A001209E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97AD5CB1DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +720,7 @@
 				C97AD5CD1DC2178A001209E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

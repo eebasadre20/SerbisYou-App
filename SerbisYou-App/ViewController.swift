@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+   let loginButton = FBSDKLoginButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.loginButton.hidden = true
+      
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+          if let user = user {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView") as? UIViewController
+            self.presentViewController(homeViewController, animated: true, completion: nil)
+          } else {
+            self.loginButton.center = self.view!.center
+            self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+            self.loginButton.delegate = self
+            self.view!.addSubview(self.loginButton)
+            
+            self.loginButton.hidden = false
+          }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +40,16 @@ class ViewController: UIViewController {
     }
 
 
+   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+      let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+   
+      FIRAuth.auth()?.signInWithCredential(credential) { (user, error ) in
+         print( "Sign in using firebase" )
+      }
+   }
+   
+   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+      print("User Logout")
+   }
 }
 
