@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A01DC2178A001209E0 /* AppDelegate.swift */; };
+		C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A21DC2178A001209E0 /* ViewController.swift */; };
+		C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A41DC2178A001209E0 /* Main.storyboard */; };
+		C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A71DC2178A001209E0 /* Assets.xcassets */; };
+		C97AD5AB1DC2178A001209E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */; };
+		C97AD5B61DC2178A001209E0 /* SerbisYou_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */; };
+		C97AD5C11DC2178A001209E0 /* SerbisYou_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C97AD5B21DC2178A001209E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C97AD5951DC21789001209E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C97AD59C1DC21789001209E0;
+			remoteInfo = "SerbisYou-App";
+		};
+		C97AD5BD1DC2178A001209E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C97AD5951DC21789001209E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C97AD59C1DC21789001209E0;
+			remoteInfo = "SerbisYou-App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C97AD59D1DC21789001209E0 /* SerbisYou-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SerbisYou-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97AD5A01DC2178A001209E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C97AD5A21DC2178A001209E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C97AD5A51DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C97AD5A71DC2178A001209E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C97AD5AA1DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C97AD5AC1DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97AD5B11DC2178A001209E0 /* SerbisYou-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerbisYou_AppTests.swift; sourceTree = "<group>"; };
+		C97AD5B71DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97AD5BC1DC2178A001209E0 /* SerbisYou-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerbisYou_AppUITests.swift; sourceTree = "<group>"; };
+		C97AD5C21DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C97AD59A1DC21789001209E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5AE1DC2178A001209E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5B91DC2178A001209E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C97AD5941DC21789001209E0 = {
+			isa = PBXGroup;
+			children = (
+				C97AD59F1DC21789001209E0 /* SerbisYou-App */,
+				C97AD5B41DC2178A001209E0 /* SerbisYou-AppTests */,
+				C97AD5BF1DC2178A001209E0 /* SerbisYou-AppUITests */,
+				C97AD59E1DC21789001209E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C97AD59E1DC21789001209E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C97AD59D1DC21789001209E0 /* SerbisYou-App.app */,
+				C97AD5B11DC2178A001209E0 /* SerbisYou-AppTests.xctest */,
+				C97AD5BC1DC2178A001209E0 /* SerbisYou-AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C97AD59F1DC21789001209E0 /* SerbisYou-App */ = {
+			isa = PBXGroup;
+			children = (
+				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
+				C97AD5A21DC2178A001209E0 /* ViewController.swift */,
+				C97AD5A41DC2178A001209E0 /* Main.storyboard */,
+				C97AD5A71DC2178A001209E0 /* Assets.xcassets */,
+				C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */,
+				C97AD5AC1DC2178A001209E0 /* Info.plist */,
+			);
+			path = "SerbisYou-App";
+			sourceTree = "<group>";
+		};
+		C97AD5B41DC2178A001209E0 /* SerbisYou-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */,
+				C97AD5B71DC2178A001209E0 /* Info.plist */,
+			);
+			path = "SerbisYou-AppTests";
+			sourceTree = "<group>";
+		};
+		C97AD5BF1DC2178A001209E0 /* SerbisYou-AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */,
+				C97AD5C21DC2178A001209E0 /* Info.plist */,
+			);
+			path = "SerbisYou-AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C97AD59C1DC21789001209E0 /* SerbisYou-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C97AD5C51DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-App" */;
+			buildPhases = (
+				C97AD5991DC21789001209E0 /* Sources */,
+				C97AD59A1DC21789001209E0 /* Frameworks */,
+				C97AD59B1DC21789001209E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SerbisYou-App";
+			productName = "SerbisYou-App";
+			productReference = C97AD59D1DC21789001209E0 /* SerbisYou-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C97AD5B01DC2178A001209E0 /* SerbisYou-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C97AD5C81DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppTests" */;
+			buildPhases = (
+				C97AD5AD1DC2178A001209E0 /* Sources */,
+				C97AD5AE1DC2178A001209E0 /* Frameworks */,
+				C97AD5AF1DC2178A001209E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C97AD5B31DC2178A001209E0 /* PBXTargetDependency */,
+			);
+			name = "SerbisYou-AppTests";
+			productName = "SerbisYou-AppTests";
+			productReference = C97AD5B11DC2178A001209E0 /* SerbisYou-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C97AD5BB1DC2178A001209E0 /* SerbisYou-AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C97AD5CB1DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppUITests" */;
+			buildPhases = (
+				C97AD5B81DC2178A001209E0 /* Sources */,
+				C97AD5B91DC2178A001209E0 /* Frameworks */,
+				C97AD5BA1DC2178A001209E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C97AD5BE1DC2178A001209E0 /* PBXTargetDependency */,
+			);
+			name = "SerbisYou-AppUITests";
+			productName = "SerbisYou-AppUITests";
+			productReference = C97AD5BC1DC2178A001209E0 /* SerbisYou-AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C97AD5951DC21789001209E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = eebasadre.co;
+				TargetAttributes = {
+					C97AD59C1DC21789001209E0 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					C97AD5B01DC2178A001209E0 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C97AD59C1DC21789001209E0;
+					};
+					C97AD5BB1DC2178A001209E0 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C97AD59C1DC21789001209E0;
+					};
+				};
+			};
+			buildConfigurationList = C97AD5981DC21789001209E0 /* Build configuration list for PBXProject "SerbisYou-App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C97AD5941DC21789001209E0;
+			productRefGroup = C97AD59E1DC21789001209E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C97AD59C1DC21789001209E0 /* SerbisYou-App */,
+				C97AD5B01DC2178A001209E0 /* SerbisYou-AppTests */,
+				C97AD5BB1DC2178A001209E0 /* SerbisYou-AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C97AD59B1DC21789001209E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97AD5AB1DC2178A001209E0 /* LaunchScreen.storyboard in Resources */,
+				C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */,
+				C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5AF1DC2178A001209E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5BA1DC2178A001209E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C97AD5991DC21789001209E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */,
+				C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5AD1DC2178A001209E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97AD5B61DC2178A001209E0 /* SerbisYou_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AD5B81DC2178A001209E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97AD5C11DC2178A001209E0 /* SerbisYou_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C97AD5B31DC2178A001209E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C97AD59C1DC21789001209E0 /* SerbisYou-App */;
+			targetProxy = C97AD5B21DC2178A001209E0 /* PBXContainerItemProxy */;
+		};
+		C97AD5BE1DC2178A001209E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C97AD59C1DC21789001209E0 /* SerbisYou-App */;
+			targetProxy = C97AD5BD1DC2178A001209E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C97AD5A41DC2178A001209E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97AD5A51DC2178A001209E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97AD5AA1DC2178A001209E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C97AD5C31DC2178A001209E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C97AD5C41DC2178A001209E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C97AD5C61DC2178A001209E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C97AD5C71DC2178A001209E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C97AD5C91DC2178A001209E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SerbisYou-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SerbisYou-App.app/SerbisYou-App";
+			};
+			name = Debug;
+		};
+		C97AD5CA1DC2178A001209E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SerbisYou-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SerbisYou-App.app/SerbisYou-App";
+			};
+			name = Release;
+		};
+		C97AD5CC1DC2178A001209E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SerbisYou-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SerbisYou-App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C97AD5CD1DC2178A001209E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SerbisYou-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SerbisYou-App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C97AD5981DC21789001209E0 /* Build configuration list for PBXProject "SerbisYou-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97AD5C31DC2178A001209E0 /* Debug */,
+				C97AD5C41DC2178A001209E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C97AD5C51DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97AD5C61DC2178A001209E0 /* Debug */,
+				C97AD5C71DC2178A001209E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C97AD5C81DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97AD5C91DC2178A001209E0 /* Debug */,
+				C97AD5CA1DC2178A001209E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C97AD5CB1DC2178A001209E0 /* Build configuration list for PBXNativeTarget "SerbisYou-AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97AD5CC1DC2178A001209E0 /* Debug */,
+				C97AD5CD1DC2178A001209E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C97AD5951DC21789001209E0 /* Project object */;
+}
