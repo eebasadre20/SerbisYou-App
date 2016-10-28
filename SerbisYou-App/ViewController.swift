@@ -20,7 +20,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
           if let user = user {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView") as! UIViewController
+            let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
             self.presentViewController(homeViewController, animated: true, completion: nil)
           } else {
             self.loginButton.center = self.view!.center
