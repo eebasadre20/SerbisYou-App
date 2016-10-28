@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,49 +17,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-eR-UQd">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                                <color key="color" red="0.99215692281723022" green="0.74901962280273438" blue="0.17254902422428131" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r8w-eR-UQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6fy-W2-NoC"/>
+                            <constraint firstItem="r8w-eR-UQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EfB-HQ-1fI"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="LoadinSpinner" destination="r8w-eR-UQd" id="1Cm-GE-AL7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.5" y="422.5"/>
+            <point key="canvasLocation" x="375.5" y="368.5"/>
         </scene>
         <!--Home View Controller-->
-        <scene sceneID="155-K2-t9z">
+        <scene sceneID="UQg-kY-ef1">
             <objects>
-                <viewController storyboardIdentifier="HomeView" id="EcX-Lh-836" customClass="HomeViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VHv-yk-9WR" customClass="HomeViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jxc-yk-IAn"/>
-                        <viewControllerLayoutGuide type="bottom" id="LOt-YD-vjd"/>
+                        <viewControllerLayoutGuide type="top" id="jtL-qC-O9p"/>
+                        <viewControllerLayoutGuide type="bottom" id="ePR-m6-fTg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SqJ-fr-aV1">
+                    <view key="view" contentMode="scaleToFill" id="1ME-GG-SHw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBM-TS-5Yn">
-                                <rect key="frame" x="162" y="28" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoZ-4h-De3">
+                                <rect key="frame" x="162" y="33" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-ty-uyA">
-                                <rect key="frame" x="306" y="23" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0P-L6-eAp">
+                                <rect key="frame" x="306" y="29" width="52" height="30"/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="VHv-yk-9WR" eventType="touchUpInside" id="Duj-FV-U5I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FBM-TS-5Yn" firstAttribute="centerX" secondItem="SqJ-fr-aV1" secondAttribute="centerX" id="RP2-L0-Bcp"/>
-                            <constraint firstItem="kGa-ty-uyA" firstAttribute="top" secondItem="Jxc-yk-IAn" secondAttribute="bottom" constant="3" id="S9v-mp-8Qd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kGa-ty-uyA" secondAttribute="trailing" constant="-3" id="s16-f6-M8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L0P-L6-eAp" secondAttribute="trailing" constant="-3" id="LVF-SP-2wA"/>
+                            <constraint firstItem="AoZ-4h-De3" firstAttribute="centerX" secondItem="1ME-GG-SHw" secondAttribute="centerX" id="Ub0-2x-kM5"/>
+                            <constraint firstItem="L0P-L6-eAp" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="9" id="Wkm-Kd-5B5"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dmX-K9-tbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769.5" y="422.5"/>
+            <point key="canvasLocation" x="893.5" y="368.5"/>
         </scene>
     </scenes>
 </document>

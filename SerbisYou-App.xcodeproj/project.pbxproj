@@ -22,7 +22,7 @@
 		C97AD5E51DC22BCC001209E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */; };
 		C97AD5E61DC22BCC001209E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */; };
 		C97AD5E71DC22BCC001209E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */; };
-		C97AD5E91DC2472E001209E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5E81DC2472E001209E0 /* HomeViewController.swift */; };
+		C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5EC1DC30143001209E0 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
-		C97AD5E81DC2472E001209E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C97AD5EC1DC30143001209E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App.release.xcconfig"; sourceTree = "<group>"; };
 		DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,8 +146,8 @@
 			children = (
 				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
 				C97AD5A21DC2178A001209E0 /* ViewController.swift */,
+				C97AD5EC1DC30143001209E0 /* HomeViewController.swift */,
 				C97AD5A41DC2178A001209E0 /* Main.storyboard */,
-				C97AD5E81DC2472E001209E0 /* HomeViewController.swift */,
 				C97AD5A71DC2178A001209E0 /* Assets.xcassets */,
 				C97AD5A91DC2178A001209E0 /* LaunchScreen.storyboard */,
 				C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */,
@@ -453,7 +453,7 @@
 			files = (
 				C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */,
 				C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */,
-				C97AD5E91DC2472E001209E0 /* HomeViewController.swift in Sources */,
+				C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
