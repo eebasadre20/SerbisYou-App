@@ -9,10 +9,12 @@
 import UIKit
 import FirebaseAuth
 import FBSDKCoreKit
+import GoogleMaps
 
 class HomeViewController: UIViewController {
     @IBAction func didTapLogout(sender: AnyObject) {
       // Sign out user from Firebase
+   
       try! FIRAuth.auth()!.signOut()
       
       // Sign out user from FB
@@ -22,17 +24,42 @@ class HomeViewController: UIViewController {
       let loginViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
       self.presentViewController(loginViewController, animated: true, completion: nil)
     }
-
+   
+   @IBOutlet weak var mapView: GMSMapView!
+   @IBOutlet weak var addressLabel: UILabel!
+    
+   var locationManager: CLLocationManager!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+      
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        mapView.delegate = self
+   }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func reverseGeocoderCoordinate(coordinate: CLLocationCoordinate2D) {
+        
+        let geocoder = GMSGeocoder()
+        
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            
+            if let address = response?.firstResult() {
+                let lines = address.lines! as [String]
+                
+                self.addressLabel.text = lines.joinWithSeparator("\n")
+                
+                UIView.animateWithDuration(0.25) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
     }
     
 
@@ -46,4 +73,29 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+
+extension HomeViewController: CLLocationManagerDelegate {
+   
+   @objc func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+      if status == .AuthorizedWhenInUse {
+         locationManager.startUpdatingLocation()
+         
+         mapView.myLocationEnabled = true
+         mapView.settings.myLocationButton = true
+      }
+   }
+   
+   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+      if let location = locations.first {
+         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+         locationManager.stopUpdatingLocation()
+      }
+   }
+}
+
+extension HomeViewController: GMSMapViewDelegate {
+   func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
+      reverseGeocoderCoordinate(position.target)
+   }
 }
