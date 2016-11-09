@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
+import GoogleMaps
 
 
 @UIApplicationMain
@@ -16,12 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let googleMapsApiKey = "AIzaSyD8M-DB1zocR9u2cBa7SrV_-ieYPaAzOHg"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
+        GMSServices.provideAPIKey(googleMapsApiKey)
         return true
     }
    

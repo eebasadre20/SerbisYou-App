@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qZ3-Ab-elE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -36,7 +36,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375.5" y="368.5"/>
+            <point key="canvasLocation" x="250.5" y="369.5"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4Vu-SW-D04">
+            <objects>
+                <viewController id="qZ3-Ab-elE" customClass="LoginViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sf3-wW-pJE"/>
+                        <viewControllerLayoutGuide type="bottom" id="W5a-NJ-OPX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="79A-6U-i7j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-a1-PGZ" colorLabel="IBBuiltInLabel-Yellow">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                                <color key="color" red="1" green="0.73574644613642393" blue="0.22345489805042507" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-mP-t4j">
+                                <rect key="frame" x="127" y="45" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Cbr-fX-BN9"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Sign up"/>
+                                    <segment title="Login"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.73574644609999995" blue="0.22345489809999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="authenticationSegment:" destination="qZ3-Ab-elE" eventType="valueChanged" id="hJl-fR-thB"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-m7-KHP">
+                                <rect key="frame" x="0.0" y="171" width="375" height="247"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V1x-mP-t4j" firstAttribute="centerX" secondItem="79A-6U-i7j" secondAttribute="centerX" id="nBk-Wg-yXa"/>
+                            <constraint firstItem="V1x-mP-t4j" firstAttribute="top" secondItem="sf3-wW-pJE" secondAttribute="bottom" constant="25" id="nIv-Gs-fE8"/>
+                            <constraint firstItem="oTV-a1-PGZ" firstAttribute="centerX" secondItem="79A-6U-i7j" secondAttribute="centerX" id="qje-Gr-yAZ"/>
+                            <constraint firstItem="oTV-a1-PGZ" firstAttribute="centerY" secondItem="79A-6U-i7j" secondAttribute="centerY" id="rkT-EI-wfa"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="authenticationSegment" destination="V1x-mP-t4j" id="NJ8-r6-Ghg"/>
+                        <outlet property="loadingSpinner" destination="oTV-a1-PGZ" id="1D1-pD-wEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-WT-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660.5" y="369.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UQg-kY-ef1">
@@ -63,19 +116,38 @@
                                     <action selector="didTapLogout:" destination="VHv-yk-9WR" eventType="touchUpInside" id="Duj-FV-U5I"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-ww-9cE">
+                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bug-cO-bao" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="67" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bug-cO-bao" firstAttribute="top" secondItem="L0P-L6-eAp" secondAttribute="bottom" constant="8" id="1d7-kY-0nC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L0P-L6-eAp" secondAttribute="trailing" constant="-3" id="LVF-SP-2wA"/>
                             <constraint firstItem="AoZ-4h-De3" firstAttribute="centerX" secondItem="1ME-GG-SHw" secondAttribute="centerX" id="Ub0-2x-kM5"/>
                             <constraint firstItem="L0P-L6-eAp" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="9" id="Wkm-Kd-5B5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dmc-ww-9cE" secondAttribute="trailing" constant="-20" id="X1T-Ku-1ek"/>
+                            <constraint firstItem="dmc-ww-9cE" firstAttribute="top" secondItem="bug-cO-bao" secondAttribute="bottom" constant="8" id="a5K-Xg-jbo"/>
+                            <constraint firstItem="dmc-ww-9cE" firstAttribute="leading" secondItem="1ME-GG-SHw" secondAttribute="leadingMargin" constant="-20" id="enn-Th-V5Y"/>
+                            <constraint firstItem="ePR-m6-fTg" firstAttribute="top" secondItem="dmc-ww-9cE" secondAttribute="bottom" id="ztm-h9-fx2"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="dmc-ww-9cE" id="54O-UH-7b8"/>
+                        <outlet property="mapView" destination="bug-cO-bao" id="20n-UH-E1U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.5" y="368.5"/>
+            <point key="canvasLocation" x="1056.5" y="363.5"/>
         </scene>
     </scenes>
 </document>
