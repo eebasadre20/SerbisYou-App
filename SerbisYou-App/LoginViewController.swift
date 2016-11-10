@@ -10,7 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UserLoginDelegate, UserSignUpDelegate {
    var signUpWidget: SignUpWidget!
    var loginWidget: LoginWidget!
    let loginButton = FBSDKLoginButton()
@@ -23,11 +23,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBAction func authenticationSegment(sender: AnyObject) {
         if authenticationSegment.selectedSegmentIndex == 0 {
          signUpWidget = SignUpWidget(frame: CGRect(x: 0, y: 171, width: 375, height: 247))
+         signUpWidget.signUpDelegate = self
          loginWidget.removeFromSuperview()
          self.view.addSubview(signUpWidget)
         } else {
          signUpWidget.removeFromSuperview()
          loginWidget = LoginWidget(frame: CGRect(x: 0, y: 171, width: 375, height: 247))
+         loginWidget.loginDelegate = self
          self.view.addSubview(loginWidget)
       }
     }
@@ -52,6 +54,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
          }
       
          signUpWidget = SignUpWidget(frame: CGRect(x: 0, y: 171, width: 375, height: 247))
+         authenticationSegment.setEnabled(true, forSegmentAtIndex: 0)
+         signUpWidget.signUpDelegate = self
          self.view.addSubview(signUpWidget)
 
         // Do any additional setup after loading the view.
@@ -61,6 +65,27 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+   
+   // MARK: - LoginWidget Delegate
+
+   func userDidLogin(status: Bool) {
+      if status == true {
+         self.performSegueWithIdentifier("homeView", sender: nil)
+      } else {
+         print("Please! Enter correct email and password.")
+      }
+   }
+   
+   // MARK: - SignUpWidget Delegate
+   
+   func userDidSignUp(status: Bool, message: String) {
+      if status == true {
+         print(message)
+      } else {
+         print(message)
+      }
+   }
    
    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
       

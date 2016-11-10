@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250.5" y="369.5"/>
+            <point key="canvasLocation" x="130.5" y="383.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4Vu-SW-D04">
@@ -85,11 +85,12 @@
                     <connections>
                         <outlet property="authenticationSegment" destination="V1x-mP-t4j" id="NJ8-r6-Ghg"/>
                         <outlet property="loadingSpinner" destination="oTV-a1-PGZ" id="1D1-pD-wEC"/>
+                        <segue destination="VHv-yk-9WR" kind="show" identifier="homeView" id="qWn-Wa-kf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-WT-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660.5" y="369.5"/>
+            <point key="canvasLocation" x="662.5" y="363.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UQg-kY-ef1">
@@ -147,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.5" y="363.5"/>
+            <point key="canvasLocation" x="1077.5" y="363.5"/>
         </scene>
     </scenes>
 </document>
