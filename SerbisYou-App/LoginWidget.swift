@@ -8,13 +8,28 @@
 
 import UIKit
 
+protocol UserLoginDelegate {
+   func userDidLogin(status: Bool)
+}
+
 @IBDesignable class LoginWidget: UIView {
 
+   var loginDelegate: UserLoginDelegate?
    var loginView: UIView!
    var nibName: String = "LoginWidget"
    
+   @IBOutlet weak var email: UITextField!
+   @IBOutlet weak var password: UITextField!
+    
+   @IBAction func loginBtn(sender: AnyObject) {
+      if email.text == "eebasadre20@gmail.com" && password.text == "gwapoko" {
+         loginDelegate?.userDidLogin(true)
+      
+      } else {
+         loginDelegate?.userDidLogin(false)
+      }
+   }
    // init
-   
    override init(frame: CGRect) {
       super.init(frame: frame)
       

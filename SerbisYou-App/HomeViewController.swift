@@ -19,10 +19,11 @@ class HomeViewController: UIViewController {
       
       // Sign out user from FB
       FBSDKAccessToken.setCurrentAccessToken(nil)
+      self.dismissViewControllerAnimated(true, completion: nil)
       
-      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      let loginViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
-      self.presentViewController(loginViewController, animated: true, completion: nil)
+//      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//      let loginViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
+//      self.presentViewController(loginViewController, animated: true, completion: nil)
     }
    
    @IBOutlet weak var mapView: GMSMapView!

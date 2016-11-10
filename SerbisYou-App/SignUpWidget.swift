@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+protocol UserSignUpDelegate {
+   func userDidSignUp(status: Bool, message: String)
+}
 
 @IBDesignable class SignUpWidget: UIView {
    var signUpView: UIView!
    var nibName: String = "SignUpWidget"
+   var signUpDelegate: UserSignUpDelegate?
    
+   @IBOutlet weak var username: UITextField!
+   @IBOutlet weak var email: UITextField!
+   @IBOutlet weak var password: UITextField!
+   
+    
+   @IBAction func SignUpBtn(sender: AnyObject) {
+      FIRAuth.auth()?.createUserWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
+         if error != nil {
+            self.signUpDelegate?.userDidSignUp(true, message: "Welcome aboard")
+         } else {
+            self.signUpDelegate?.userDidSignUp(false, message: "Something wrong when signup")
+         }
+      })
+   }
+    
    // init
-   
    override init(frame: CGRect) {
       super.init(frame: frame)
       

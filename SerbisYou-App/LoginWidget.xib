@@ -5,7 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginWidget" customModule="SerbisYou_App" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginWidget" customModule="SerbisYou_App" customModuleProvider="target">
+            <connections>
+                <outlet property="email" destination="D2F-ny-Ovb" id="xVd-6s-XyD"/>
+                <outlet property="password" destination="euG-dT-9Kc" id="4Qd-va-Hah"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
@@ -33,6 +38,9 @@
                         <constraint firstAttribute="width" constant="38" id="kvw-Kw-kFa"/>
                     </constraints>
                     <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="yIT-IB-OoZ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
