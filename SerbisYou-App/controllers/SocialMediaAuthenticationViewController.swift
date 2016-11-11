@@ -13,8 +13,32 @@ import FirebaseAuth
 class SocialMediaAuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate {
    let loginButton = FBSDKLoginButton()
 
-    @IBAction func segueSample(sender: AnyObject) {
+    @IBAction func AuthViaEmail(sender: AnyObject) {
         performSegueWithIdentifier("AuthenticationView", sender: nil)
+    }
+    @IBAction func segueSample(sender: AnyObject) {
+        let fbLogin = FBSDKLoginManager()
+        fbLogin.logInWithReadPermissions(["email"], fromViewController: self) { (fbResult, fbError) -> Void in
+            if fbError != nil {
+                print("Facebook login failed. Error \(fbError)")
+                
+            } else if fbResult.isCancelled {
+                print("Facebook login was cancelled")
+            } else {
+               let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+               
+               FIRAuth.auth()?.signInWithCredential(credential) { (user, error ) in
+                  
+                  if error != nil {
+                     print("Oops! something's wrong.")
+                  } else {
+                     // do something here
+                  }
+               }
+
+         }
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +51,8 @@ class SocialMediaAuthenticationViewController: UIViewController, FBSDKLoginButto
             let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
             self.presentViewController(homeViewController, animated: true, completion: nil)
          } else {
-            self.loginButton.center = self.view!.center
             self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
             self.loginButton.delegate = self
-            self.view!.addSubview(self.loginButton)
             
             self.loginButton.hidden = false
          }
@@ -39,7 +61,7 @@ class SocialMediaAuthenticationViewController: UIViewController, FBSDKLoginButto
 
         // Do any additional setup after loading the view.
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

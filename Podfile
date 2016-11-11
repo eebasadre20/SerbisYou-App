@@ -13,6 +13,7 @@ target 'SerbisYou-App' do
   pod 'FBSDKShareKit', '4.15.0'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'GoogleSignIn'
   
   target 'SerbisYou-AppTests' do
     inherit! :search_paths

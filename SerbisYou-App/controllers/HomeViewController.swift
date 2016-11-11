@@ -69,8 +69,7 @@ class HomeViewController: UIViewController {
     func currentUser() {
         FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
             if let user = user {
-                print(user)
-                self.currentUserLbl.text = user.email
+                self.currentUserLbl.text = user.displayName
             } else {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }

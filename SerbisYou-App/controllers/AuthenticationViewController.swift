@@ -35,24 +35,8 @@ class AuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate, 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-      
          self.loginButton.hidden = true
-      
-         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-            if let user = user {
-               let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
-               self.presentViewController(homeViewController, animated: true, completion: nil)
-            } else {
-               self.loginButton.center = self.view!.center
-               self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-               self.loginButton.delegate = self
-               self.view!.addSubview(self.loginButton)
-            
-               self.loginButton.hidden = false
-            }
-         }
-      
+
          signUpWidget = SignUpWidget(frame: CGRect(x: 0, y: 171, width: 375, height: 247))
          authenticationSegment.setEnabled(true, forSegmentAtIndex: 0)
          signUpWidget.signUpDelegate = self
@@ -71,7 +55,9 @@ class AuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate, 
 
    func userDidLogin(status: Bool, message: String) {
       if status == true {
-         self.performSegueWithIdentifier("homeView", sender: nil)
+         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
+         self.presentViewController(homeViewController, animated: true, completion: nil)
       } else {
          var errorAlert = UIAlertController(title: "SerbisYou", message: message, preferredStyle: UIAlertControllerStyle.Alert)
          
