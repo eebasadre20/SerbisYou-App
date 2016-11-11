@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qZ3-Ab-elE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YkV-P9-fct">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Social Media Authentication View Controller-->
+        <scene sceneID="rMB-up-Xy6">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hRk-WL-QpT" customClass="SocialMediaAuthenticationViewController" customModule="SerbisYou_App" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="SLO-5D-3aZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="CWW-j3-KSz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="tNx-YW-rlB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-eR-UQd">
-                                <rect key="frame" x="177" y="324" width="20" height="20"/>
-                                <color key="color" red="0.99215692281723022" green="0.74901962280273438" blue="0.17254902422428131" alpha="1" colorSpace="deviceRGB"/>
-                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRj-Ya-eSg">
+                                <rect key="frame" x="153" y="319" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="segueSample:" destination="hRk-WL-QpT" eventType="touchUpInside" id="Ldi-Ov-D49"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="r8w-eR-UQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6fy-W2-NoC"/>
-                            <constraint firstItem="r8w-eR-UQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EfB-HQ-1fI"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RhU-Qz-npo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="LoadinSpinner" destination="r8w-eR-UQd" id="1Cm-GE-AL7"/>
+                        <segue destination="qZ3-Ab-elE" kind="show" identifier="AuthenticationView" id="TZU-Kr-ZXi"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-wk-yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.5" y="383.5"/>
+            <point key="canvasLocation" x="1565.5" y="609.5"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Authentication View Controller-->
         <scene sceneID="4Vu-SW-D04">
             <objects>
-                <viewController id="qZ3-Ab-elE" customClass="LoginViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qZ3-Ab-elE" customClass="AuthenticationViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sf3-wW-pJE"/>
                         <viewControllerLayoutGuide type="bottom" id="W5a-NJ-OPX"/>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="177" y="324" width="20" height="20"/>
                                 <color key="color" red="1" green="0.73574644613642393" blue="0.22345489805042507" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-mP-t4j">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-mP-t4j">
                                 <rect key="frame" x="127" y="45" width="121" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="Cbr-fX-BN9"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="oTV-a1-PGZ" firstAttribute="centerY" secondItem="79A-6U-i7j" secondAttribute="centerY" id="rkT-EI-wfa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BRj-we-c40"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="authenticationSegment" destination="V1x-mP-t4j" id="NJ8-r6-Ghg"/>
@@ -90,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-WT-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662.5" y="363.5"/>
+            <point key="canvasLocation" x="2063.5" y="281.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UQg-kY-ef1">
@@ -160,7 +161,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5" y="363.5"/>
+            <point key="canvasLocation" x="2779.5" y="281.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Cz-Vm-GyN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YkV-P9-fct" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vv5-ad-ab9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8wK-Hp-EAR">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="hRk-WL-QpT" kind="relationship" relationship="rootViewController" id="Q7M-fq-5jN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vdm-tx-S2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="328"/>
         </scene>
     </scenes>
 </document>
