@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol UserLoginDelegate {
-   func userDidLogin(status: Bool)
+   func userDidLogin(status: Bool, message: String)
 }
 
 @IBDesignable class LoginWidget: UIView {
@@ -22,12 +23,13 @@ protocol UserLoginDelegate {
    @IBOutlet weak var password: UITextField!
     
    @IBAction func loginBtn(sender: AnyObject) {
-      if email.text == "eebasadre20@gmail.com" && password.text == "gwapoko" {
-         loginDelegate?.userDidLogin(true)
-      
-      } else {
-         loginDelegate?.userDidLogin(false)
-      }
+      FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
+         if user != nil {
+            self.loginDelegate?.userDidLogin(true, message: "Welcome, \(self.email.text)")
+         } else {
+            self.loginDelegate?.userDidLogin(false, message: (error?.localizedDescription)!)
+         }
+      })
    }
    // init
    override init(frame: CGRect) {
