@@ -69,11 +69,18 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UserLogin
    
    // MARK: - LoginWidget Delegate
 
-   func userDidLogin(status: Bool) {
+   func userDidLogin(status: Bool, message: String) {
       if status == true {
          self.performSegueWithIdentifier("homeView", sender: nil)
       } else {
-         print("Please! Enter correct email and password.")
+         var errorAlert = UIAlertController(title: "SerbisYou", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+         
+         let okAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            print("Somethinng here")
+         })
+         
+         errorAlert.addAction(okAction)
+         self.presentViewController(errorAlert, animated: true, completion: nil)
       }
    }
    

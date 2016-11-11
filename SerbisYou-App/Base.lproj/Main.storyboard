@@ -127,11 +127,22 @@
                                 <rect key="frame" x="0.0" y="67" width="375" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-U5-vA6">
+                                <rect key="frame" x="10" y="26" width="100" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EnR-jc-RGG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bug-cO-bao" firstAttribute="top" secondItem="L0P-L6-eAp" secondAttribute="bottom" constant="8" id="1d7-kY-0nC"/>
+                            <constraint firstItem="Clf-U5-vA6" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="6" id="3HB-6e-HIF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L0P-L6-eAp" secondAttribute="trailing" constant="-3" id="LVF-SP-2wA"/>
+                            <constraint firstItem="Clf-U5-vA6" firstAttribute="leading" secondItem="1ME-GG-SHw" secondAttribute="leading" constant="10" id="Qgw-46-x5G"/>
                             <constraint firstItem="AoZ-4h-De3" firstAttribute="centerX" secondItem="1ME-GG-SHw" secondAttribute="centerX" id="Ub0-2x-kM5"/>
                             <constraint firstItem="L0P-L6-eAp" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="9" id="Wkm-Kd-5B5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dmc-ww-9cE" secondAttribute="trailing" constant="-20" id="X1T-Ku-1ek"/>
@@ -143,6 +154,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressLabel" destination="dmc-ww-9cE" id="54O-UH-7b8"/>
+                        <outlet property="currentUserLbl" destination="Clf-U5-vA6" id="FXd-Ak-9Lg"/>
                         <outlet property="mapView" destination="bug-cO-bao" id="20n-UH-E1U"/>
                     </connections>
                 </viewController>

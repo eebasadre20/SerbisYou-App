@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
 //      self.presentViewController(loginViewController, animated: true, completion: nil)
     }
    
+   @IBOutlet weak var currentUserLbl: UILabel!
    @IBOutlet weak var mapView: GMSMapView!
    @IBOutlet weak var addressLabel: UILabel!
     
@@ -38,6 +39,8 @@ class HomeViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         mapView.delegate = self
+        
+        currentUser()
    }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +64,17 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func currentUser() {
+        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
+            if let user = user {
+                print(user)
+                self.currentUserLbl.text = user.email
+            } else {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        })
     }
     
 

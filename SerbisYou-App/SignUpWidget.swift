@@ -25,10 +25,10 @@ protocol UserSignUpDelegate {
     
    @IBAction func SignUpBtn(sender: AnyObject) {
       FIRAuth.auth()?.createUserWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
-         if error != nil {
-            self.signUpDelegate?.userDidSignUp(true, message: "Welcome aboard")
+         if user != nil {
+            self.signUpDelegate?.userDidSignUp(true, message: "Welcome \(self.email.text)")
          } else {
-            self.signUpDelegate?.userDidSignUp(false, message: "Something wrong when signup")
+            self.signUpDelegate?.userDidSignUp(false, message: (error?.localizedDescription)!)
          }
       })
    }
