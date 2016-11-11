@@ -21,7 +21,7 @@ protocol UserLoginDelegate {
    
    @IBOutlet weak var email: UITextField!
    @IBOutlet weak var password: UITextField!
-    
+   @IBOutlet weak var name: UITextField!
    @IBAction func loginBtn(sender: AnyObject) {
       FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
          if user != nil {

@@ -16,14 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2F-ny-Ovb">
-                    <rect key="frame" x="66" y="41" width="242" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="242" id="zdT-vi-17J"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euG-dT-9Kc">
                     <rect key="frame" x="66" y="85" width="242" height="30"/>
                     <constraints>
@@ -42,6 +34,14 @@
                         <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="yIT-IB-OoZ"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2F-ny-Ovb">
+                    <rect key="frame" x="66" y="41" width="242" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="242" id="zdT-vi-17J"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

@@ -10,7 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UserLoginDelegate, UserSignUpDelegate {
+class AuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate, UserLoginDelegate, UserSignUpDelegate {
    var signUpWidget: SignUpWidget!
    var loginWidget: LoginWidget!
    let loginButton = FBSDKLoginButton()

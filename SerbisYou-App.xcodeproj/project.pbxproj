@@ -10,23 +10,24 @@
 		312B7834A69EB2DD743D314B /* Pods_SerbisYou_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777F049800443D4B5EB389AB /* Pods_SerbisYou_App.framework */; };
 		55A96B0DCB113AFDBAFFF4D4 /* Pods_SerbisYou_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */; };
 		BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */; };
-		C9164F8B1DD210EB00FD052C /* SignUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9164F8A1DD210EB00FD052C /* SignUpWidget.swift */; };
-		C9164F8D1DD2112A00FD052C /* SignUpWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9164F8C1DD2112A00FD052C /* SignUpWidget.xib */; };
+		C929FD921DD5CF2300B497E8 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */; };
+		C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */; };
+		C929FD971DD5CFCD00B497E8 /* SignUpWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */; };
+		C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */; };
+		C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9B1DD5D0C000B497E8 /* Info.plist */; };
+		C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */; };
+		C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */; };
+		C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */; };
 		C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A01DC2178A001209E0 /* AppDelegate.swift */; };
-		C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A21DC2178A001209E0 /* ViewController.swift */; };
 		C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A41DC2178A001209E0 /* Main.storyboard */; };
 		C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A71DC2178A001209E0 /* Assets.xcassets */; };
 		C97AD5B61DC2178A001209E0 /* SerbisYou_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */; };
 		C97AD5C11DC2178A001209E0 /* SerbisYou_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */; };
-		C97AD5CF1DC218B3001209E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */; };
 		C97AD5E41DC22BCC001209E0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E01DC22BCC001209E0 /* Bolts.framework */; };
 		C97AD5E51DC22BCC001209E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */; };
 		C97AD5E61DC22BCC001209E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */; };
 		C97AD5E71DC22BCC001209E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */; };
 		C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5EC1DC30143001209E0 /* HomeViewController.swift */; };
-		C9AC20131DD2A6CA008EB551 /* LoginWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9AC20121DD2A6CA008EB551 /* LoginWidget.xib */; };
-		C9AC20151DD2A76A008EB551 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC20141DD2A76A008EB551 /* LoginWidget.swift */; };
-		C9D8D9B61DD093590040ABF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D9B51DD093590040ABF7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,29 +55,29 @@
 		777F049800443D4B5EB389AB /* Pods_SerbisYou_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		830D096A30D8E2F8CD5ACC0C /* Pods-SerbisYou-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9164F8A1DD210EB00FD052C /* SignUpWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWidget.swift; sourceTree = "<group>"; };
-		C9164F8C1DD2112A00FD052C /* SignUpWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWidget.xib; sourceTree = "<group>"; };
+		C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
+		C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWidget.xib; sourceTree = "<group>"; };
+		C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C929FD9B1DD5D0C000B497E8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWidget.swift; sourceTree = "<group>"; };
+		C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWidget.swift; sourceTree = "<group>"; };
+		C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaAuthenticationViewController.swift; sourceTree = "<group>"; };
 		C97AD59D1DC21789001209E0 /* SerbisYou-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SerbisYou-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD5A01DC2178A001209E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C97AD5A21DC2178A001209E0 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; wrapsLines = 1; };
 		C97AD5A51DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97AD5A71DC2178A001209E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C97AD5AC1DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97AD5B11DC2178A001209E0 /* SerbisYou-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD5B51DC2178A001209E0 /* SerbisYou_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerbisYou_AppTests.swift; sourceTree = "<group>"; };
 		C97AD5B71DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97AD5BC1DC2178A001209E0 /* SerbisYou-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97AD5C01DC2178A001209E0 /* SerbisYou_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerbisYou_AppUITests.swift; sourceTree = "<group>"; };
 		C97AD5C21DC2178A001209E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C97AD5E01DC22BCC001209E0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		C97AD5EC1DC30143001209E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C9AC20121DD2A6CA008EB551 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
-		C9AC20141DD2A76A008EB551 /* LoginWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWidget.swift; sourceTree = "<group>"; };
-		C9D8D9B51DD093590040ABF7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App.release.xcconfig"; sourceTree = "<group>"; };
 		DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +127,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C929FD901DD5CDD800B497E8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */,
+				C97AD5EC1DC30143001209E0 /* HomeViewController.swift */,
+				C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		C929FD931DD5CF5A00B497E8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */,
+				C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */,
+				C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */,
+				C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C929FD981DD5D00600B497E8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C929FD991DD5D06500B497E8 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */,
+				C929FD9B1DD5D0C000B497E8 /* Info.plist */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 		C97AD5941DC21789001209E0 = {
 			isa = PBXGroup;
 			children = (
@@ -152,18 +190,13 @@
 		C97AD59F1DC21789001209E0 /* SerbisYou-App */ = {
 			isa = PBXGroup;
 			children = (
+				C929FD991DD5D06500B497E8 /* config */,
+				C929FD981DD5D00600B497E8 /* models */,
+				C929FD931DD5CF5A00B497E8 /* views */,
+				C929FD901DD5CDD800B497E8 /* controllers */,
 				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
-				C97AD5A21DC2178A001209E0 /* ViewController.swift */,
-				C97AD5EC1DC30143001209E0 /* HomeViewController.swift */,
 				C97AD5A41DC2178A001209E0 /* Main.storyboard */,
 				C97AD5A71DC2178A001209E0 /* Assets.xcassets */,
-				C97AD5CE1DC218B3001209E0 /* GoogleService-Info.plist */,
-				C97AD5AC1DC2178A001209E0 /* Info.plist */,
-				C9D8D9B51DD093590040ABF7 /* LoginViewController.swift */,
-				C9164F8A1DD210EB00FD052C /* SignUpWidget.swift */,
-				C9AC20121DD2A6CA008EB551 /* LoginWidget.xib */,
-				C9AC20141DD2A76A008EB551 /* LoginWidget.swift */,
-				C9164F8C1DD2112A00FD052C /* SignUpWidget.xib */,
 			);
 			path = "SerbisYou-App";
 			sourceTree = "<group>";
@@ -312,11 +345,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97AD5CF1DC218B3001209E0 /* GoogleService-Info.plist in Resources */,
-				C9AC20131DD2A6CA008EB551 /* LoginWidget.xib in Resources */,
+				C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */,
 				C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */,
+				C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */,
+				C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */,
 				C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */,
-				C9164F8D1DD2112A00FD052C /* SignUpWidget.xib in Resources */,
+				C929FD971DD5CFCD00B497E8 /* SignUpWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,12 +498,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D8D9B61DD093590040ABF7 /* LoginViewController.swift in Sources */,
-				C9164F8B1DD210EB00FD052C /* SignUpWidget.swift in Sources */,
-				C97AD5A31DC2178A001209E0 /* ViewController.swift in Sources */,
-				C9AC20151DD2A76A008EB551 /* LoginWidget.swift in Sources */,
+				C929FD921DD5CF2300B497E8 /* AuthenticationViewController.swift in Sources */,
 				C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */,
+				C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */,
 				C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */,
+				C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */,
+				C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +645,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
 				);
-				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
+				INFOPLIST_FILE = "SerbisYou-App/config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,7 +666,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
 				);
-				INFOPLIST_FILE = "SerbisYou-App/Info.plist";
+				INFOPLIST_FILE = "SerbisYou-App/config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
