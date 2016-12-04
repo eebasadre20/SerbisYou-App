@@ -76,13 +76,7 @@ class HomeViewController: UIViewController {
             dismissViewControllerAnimated(true, completion: nil)
          }
       }
-//        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
-//            if let user = user {
-//                self.currentUserLbl.text = user.displayName
-//            } else {
-//                self.dismissViewControllerAnimated(true, completion: nil)
-//            }
-//        })
+
     }
     
 
