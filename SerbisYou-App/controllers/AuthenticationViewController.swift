@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import Alamofire
 
 class AuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate, UserLoginDelegate, UserSignUpDelegate {
    var signUpWidget: SignUpWidget!

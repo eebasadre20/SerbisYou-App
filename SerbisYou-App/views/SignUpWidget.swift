@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Alamofire
 
 protocol UserSignUpDelegate {
    func userDidSignUp(status: Bool, message: String)
@@ -17,13 +18,14 @@ protocol UserSignUpDelegate {
    var signUpView: UIView!
    var nibName: String = "SignUpWidget"
    var signUpDelegate: UserSignUpDelegate?
-   
+      
    @IBOutlet weak var username: UITextField!
    @IBOutlet weak var email: UITextField!
    @IBOutlet weak var password: UITextField!
    
     
    @IBAction func SignUpBtn(sender: AnyObject) {
+      
       FIRAuth.auth()?.createUserWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
          if user != nil {
             self.signUpDelegate?.userDidSignUp(true, message: "Welcome \(self.email.text)")
