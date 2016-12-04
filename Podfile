@@ -15,6 +15,7 @@ target 'SerbisYou-App' do
   pod 'GooglePlaces'
   pod 'GoogleSignIn'
   pod 'Alamofire', '3.0.0'
+  pod 'SwiftyJSON', '2.3.0'
   
   target 'SerbisYou-AppTests' do
     inherit! :search_paths

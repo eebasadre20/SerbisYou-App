@@ -60,10 +60,10 @@ class AuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate, 
          let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
          self.presentViewController(homeViewController, animated: true, completion: nil)
       } else {
-         var errorAlert = UIAlertController(title: "SerbisYou", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+         let errorAlert = UIAlertController(title: "SerbisYou", message: message, preferredStyle: UIAlertControllerStyle.Alert)
          
          let okAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            print("Somethinng here")
+            
          })
          
          errorAlert.addAction(okAction)

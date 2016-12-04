@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
    @IBOutlet weak var addressLabel: UILabel!
     
    var locationManager: CLLocationManager!
+   let defaults = NSUserDefaults.standardUserDefaults()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,13 +68,21 @@ class HomeViewController: UIViewController {
     }
     
     func currentUser() {
-        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
-            if let user = user {
-                self.currentUserLbl.text = user.displayName
-            } else {
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-        })
+      if let email: String = defaults.objectForKey("email") as? String {
+         if email.isEmpty == false {
+            let splittedEmail = email.componentsSeparatedByString("@")
+            currentUserLbl.text = splittedEmail[0]
+         } else {
+            dismissViewControllerAnimated(true, completion: nil)
+         }
+      }
+//        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
+//            if let user = user {
+//                self.currentUserLbl.text = user.displayName
+//            } else {
+//                self.dismissViewControllerAnimated(true, completion: nil)
+//            }
+//        })
     }
     
 
