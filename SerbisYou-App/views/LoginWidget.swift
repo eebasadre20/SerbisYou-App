@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Alamofire
+import SwiftyJSON
 
 protocol UserLoginDelegate {
    func userDidLogin(status: Bool, message: String)
@@ -22,6 +23,8 @@ protocol UserLoginDelegate {
    var loginDelegate: UserLoginDelegate?
    var loginView: UIView!
    var nibName: String = "LoginWidget"
+    
+   let defaults = NSUserDefaults.standardUserDefaults()
    
    @IBOutlet weak var email: UITextField!
    @IBOutlet weak var password: UITextField!
@@ -39,12 +42,18 @@ protocol UserLoginDelegate {
       
       let request = Alamofire.request(.POST, "http://localhost:3000\(createToken)", parameters: client_credentials)
       request.responseJSON { (response) -> Void in
-         if response.result.isSuccess {
+         if ((response.response?.statusCode) == 200) {
+            let resource = JSON(response.result.value!)
+            self.defaults.setObject(self.email.text!, forKey: "email")
+            self.defaults.setObject(resource["data"]["auth"]["access_token"].stringValue, forKey: "access_token")
+            self.defaults.setObject(resource["data"]["auth"]["refresh_token"].stringValue, forKey: "refresh_token")
+            self.defaults.synchronize()
             self.loginDelegate?.userDidLogin(true, message: "Welcome, \(self.email.text)")
          } else {
-            
-         }
-      }
+            let error = JSON(response.result.value!)
+            self.loginDelegate?.userDidLogin(false, message: error["errors"][0]["error_description"].stringValue)
+        }
+    }
       
 //      FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
 //         if user != nil {
