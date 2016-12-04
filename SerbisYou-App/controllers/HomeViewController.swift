@@ -72,6 +72,8 @@ class HomeViewController: UIViewController {
          if email.isEmpty == false {
             let splittedEmail = email.componentsSeparatedByString("@")
             currentUserLbl.text = splittedEmail[0]
+         } else {
+            dismissViewControllerAnimated(true, completion: nil)
          }
       }
 //        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
