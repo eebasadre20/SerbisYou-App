@@ -7,58 +7,17 @@
 //
 
 import UIKit
-import FBSDKLoginKit
-import FirebaseAuth
 
-class SocialMediaAuthenticationViewController: UIViewController, FBSDKLoginButtonDelegate {
-   let loginButton = FBSDKLoginButton()
+class SocialMediaAuthenticationViewController: UIViewController {
 
-    @IBAction func AuthViaEmail(sender: AnyObject) {
-        performSegueWithIdentifier("AuthenticationView", sender: nil)
+    @IBAction func AuthViaEmail(_ sender: AnyObject) {
+        performSegue(withIdentifier: "AuthenticationView", sender: nil)
     }
-    @IBAction func segueSample(sender: AnyObject) {
-        let fbLogin = FBSDKLoginManager()
-        fbLogin.logInWithReadPermissions(["email"], fromViewController: self) { (fbResult, fbError) -> Void in
-            if fbError != nil {
-                print("Facebook login failed. Error \(fbError)")
-                
-            } else if fbResult.isCancelled {
-                print("Facebook login was cancelled")
-            } else {
-               let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
-               
-               FIRAuth.auth()?.signInWithCredential(credential) { (user, error ) in
-                  
-                  if error != nil {
-                     print("Oops! something's wrong.")
-                  } else {
-                     // do something here
-                  }
-               }
-
-         }
-        }
+    @IBAction func segueSample(_ sender: AnyObject) {
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      self.loginButton.hidden = true
-      
-      FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-         if let user = user {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HomeView")
-            self.presentViewController(homeViewController, animated: true, completion: nil)
-         } else {
-            self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-            self.loginButton.delegate = self
-            
-            self.loginButton.hidden = false
-         }
-      }
-
-
         // Do any additional setup after loading the view.
     }
    
@@ -67,39 +26,17 @@ class SocialMediaAuthenticationViewController: UIViewController, FBSDKLoginButto
         // Dispose of any resources that can be recreated.
     }
    
-   override func viewWillAppear(animated: Bool) {
+   override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
-      self.navigationController?.navigationBarHidden = true
+      self.navigationController?.isNavigationBarHidden = true
    }
    
-   override func viewWillDisappear(animated: Bool) {
+   override func viewWillDisappear(_ animated: Bool) {
       super.viewWillDisappear(animated)
-      self.navigationController?.navigationBarHidden = false
+      self.navigationController?.isNavigationBarHidden = false
    }
    
-   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-      
-      self.loginButton.hidden = true
-      //self.loadingSpinner.startAnimating()
-      
-      if(error != nil || result.isCancelled) {
-         self.loginButton.hidden = false
-         //self.loadingSpinner.stopAnimating()
-      } else {
-         let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
-         
-         FIRAuth.auth()?.signInWithCredential(credential) { (user, error ) in
-            print( "Sign in using firebase" )
-         }
-         
-      }
-      
-   }
    
-   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-      print("User Logout")
-   }
-
     
 
     /*

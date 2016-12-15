@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-wk-yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1572.5" y="303.5"/>
+            <point key="canvasLocation" x="1483.5" y="316.5"/>
         </scene>
         <!--Authentication View Controller-->
         <scene sceneID="4Vu-SW-D04">
@@ -192,6 +192,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YkV-P9-fct" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vv5-ad-ab9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginWidget" customModule="SerbisYou_App" customModuleProvider="target">
             <connections>
                 <outlet property="email" destination="D2F-ny-Ovb" id="xVd-6s-XyD"/>
+                <outlet property="loginButton" destination="2Vc-y0-BnF" id="TG4-im-mVG"/>
                 <outlet property="password" destination="euG-dT-9Kc" id="4Qd-va-Hah"/>
             </connections>
         </placeholder>
@@ -24,6 +25,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2F-ny-Ovb">
+                    <rect key="frame" x="66" y="41" width="242" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="242" id="zdT-vi-17J"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-y0-BnF">
                     <rect key="frame" x="168" y="139" width="38" height="30"/>
                     <constraints>
@@ -34,14 +43,6 @@
                         <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="yIT-IB-OoZ"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2F-ny-Ovb">
-                    <rect key="frame" x="66" y="41" width="242" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="242" id="zdT-vi-17J"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -57,7 +58,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="672.5" y="412.5"/>
+            <point key="canvasLocation" x="174.5" y="415.5"/>
         </view>
     </objects>
 </document>

@@ -7,90 +7,54 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Alamofire
 import SwiftyJSON
 
-protocol UserLoginDelegate {
-   func userDidLogin(status: Bool, message: String)
+protocol UserLoginDelegate: class {
+   func userDidPressedLoginButton(_ sender: UIButton)
 }
 
-@IBDesignable class LoginWidget: UIView {
-   
-   // request create token
+@IBDesignable class LoginWidget: UIView {   
    let createToken: String = "/api/oauth/token"
 
-   var loginDelegate: UserLoginDelegate?
+   weak var loginDelegate: UserLoginDelegate?
    var loginView: UIView!
    var nibName: String = "LoginWidget"
     
-   let defaults = NSUserDefaults.standardUserDefaults()
+   let defaults = UserDefaults.standard
    
+   @IBOutlet weak var loginButton: UIButton!
    @IBOutlet weak var email: UITextField!
    @IBOutlet weak var password: UITextField!
    @IBOutlet weak var name: UITextField!
-   @IBAction func loginBtn(sender: AnyObject) {
-      
-      
-      let client_credentials = [
-         "client_id": "f03d734be207c62a5e757ca9d685a0176fc473b724ccff5a282912f8e6578f93",
-         "client_secret": "1f71dc1f4bc1e6c7b92bf860e666a188d9556bb666413261549c48ad78870a6d",
-         "grant_type": "password",
-         "email": email.text!,
-         "password": password.text!
-      ]
-      
-      let request = Alamofire.request(.POST, "http://localhost:3000\(createToken)", parameters: client_credentials)
-      request.responseJSON { (response) -> Void in
-         if ((response.response?.statusCode) == 200) {
-            let resource = JSON(response.result.value!)
-            self.defaults.setObject(self.email.text!, forKey: "email")
-            self.defaults.setObject(resource["data"]["auth"]["access_token"].stringValue, forKey: "access_token")
-            self.defaults.setObject(resource["data"]["auth"]["refresh_token"].stringValue, forKey: "refresh_token")
-            self.defaults.synchronize()
-            self.loginDelegate?.userDidLogin(true, message: "Welcome, \(self.email.text)")
-         } else {
-            let error = JSON(response.result.value!)
-            self.loginDelegate?.userDidLogin(false, message: error["errors"][0]["error_description"].stringValue)
-        }
-    }
-      
-//      FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
-//         if user != nil {
-//            self.loginDelegate?.userDidLogin(true, message: "Welcome, \(self.email.text)")
-//         } else {
-//            self.loginDelegate?.userDidLogin(false, message: (error?.localizedDescription)!)
-//         }
-//      })
+   
+   @IBAction func loginBtn(_ sender: AnyObject) {
+      self.loginDelegate?.userDidPressedLoginButton(sender as! UIButton)
    }
    // init
    override init(frame: CGRect) {
       super.init(frame: frame)
-      
-      // set anything that uses the view or visible bounds
       setup()
    }
    
    required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
-      
-      // setup
       setup()
    }
    
    func setup() {
       loginView = loadViewFromNib()
       loginView.frame = bounds
-      loginView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+      loginView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
       
       addSubview(loginView)
       
    }
    
    func loadViewFromNib() -> UIView {
-      let bundle = NSBundle(forClass: self.dynamicType)
+      let bundle = Bundle(for: type(of: self))
       let nib = UINib(nibName: nibName, bundle: bundle)
-      let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+      let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
       
       return view
    }

@@ -7,23 +7,11 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FBSDKCoreKit
 import GoogleMaps
 
 class HomeViewController: UIViewController {
-    @IBAction func didTapLogout(sender: AnyObject) {
-      // Sign out user from Firebase
-   
-      try! FIRAuth.auth()!.signOut()
-      
-      // Sign out user from FB
-      FBSDKAccessToken.setCurrentAccessToken(nil)
-      self.dismissViewControllerAnimated(true, completion: nil)
-      
-//      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//      let loginViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
-//      self.presentViewController(loginViewController, animated: true, completion: nil)
+    @IBAction func didTapLogout(_ sender: AnyObject) {
+      self.dismiss(animated: true, completion: nil)
     }
    
    @IBOutlet weak var currentUserLbl: UILabel!
@@ -31,7 +19,8 @@ class HomeViewController: UIViewController {
    @IBOutlet weak var addressLabel: UILabel!
     
    var locationManager: CLLocationManager!
-   let defaults = NSUserDefaults.standardUserDefaults()
+   let defaults = UserDefaults.standard
+   var authCredential: UserAuthentication!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +29,8 @@ class HomeViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         mapView.delegate = self
-        
+      
+        loadAuthentication()
         currentUser()
    }
 
@@ -49,7 +39,7 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func reverseGeocoderCoordinate(coordinate: CLLocationCoordinate2D) {
+    func reverseGeocoderCoordinate(_ coordinate: CLLocationCoordinate2D) {
         
         let geocoder = GMSGeocoder()
         
@@ -58,58 +48,44 @@ class HomeViewController: UIViewController {
             if let address = response?.firstResult() {
                 let lines = address.lines! as [String]
                 
-                self.addressLabel.text = lines.joinWithSeparator("\n")
+                self.addressLabel.text = lines.joined(separator: "\n")
                 
-                UIView.animateWithDuration(0.25) {
+                UIView.animate(withDuration: 0.25, animations: {
                     self.view.layoutIfNeeded()
-                }
+                }) 
             }
         }
     }
     
     func currentUser() {
-      if let email: String = defaults.objectForKey("email") as? String {
-         if email.isEmpty == false {
-            let splittedEmail = email.componentsSeparatedByString("@")
-            currentUserLbl.text = splittedEmail[0]
-         } else {
-            dismissViewControllerAnimated(true, completion: nil)
+      if (self.authCredential != nil) {
+         currentUserLbl.text = self.authCredential.Email.components(separatedBy: "@").first
+      }
+    }
+   
+   fileprivate func loadAuthentication() {
+      if let savedData = defaults.object(forKey: "userAuthentication") as? Data {
+         if let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
+            self.authCredential = authentication
          }
       }
-//        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) -> Void in
-//            if let user = user {
-//                self.currentUserLbl.text = user.displayName
-//            } else {
-//                self.dismissViewControllerAnimated(true, completion: nil)
-//            }
-//        })
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   }
+   
 
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
    
-   @objc func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-      if status == .AuthorizedWhenInUse {
+   @objc func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+      if status == .authorizedWhenInUse {
          locationManager.startUpdatingLocation()
          
-         mapView.myLocationEnabled = true
+         mapView.isMyLocationEnabled = true
          mapView.settings.myLocationButton = true
       }
    }
    
-   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       if let location = locations.first {
          mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
          locationManager.stopUpdatingLocation()
@@ -118,7 +94,7 @@ extension HomeViewController: CLLocationManagerDelegate {
 }
 
 extension HomeViewController: GMSMapViewDelegate {
-   func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
+   func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
       reverseGeocoderCoordinate(position.target)
    }
 }

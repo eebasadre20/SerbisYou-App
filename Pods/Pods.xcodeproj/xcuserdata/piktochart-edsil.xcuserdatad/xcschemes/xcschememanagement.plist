@@ -9,26 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKShareKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-SerbisYou-App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,27 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1CD61ABBFF1F489C3FF3773D5182F930</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>22A7D005671934886DF95433B9D9B3CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2C4773F9AA0DA304A77DD77EABB1AE14</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>30D7FCF8072F5D59AE1C98D94F9A6EC9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3C5685456B3ED2A700DBD8CC7DE83D96</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E71FADC839032356BF20FFB8C2EBD7AF</key>
+		<key>ED2A51EAF2D605FC51F397C899E0E79D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

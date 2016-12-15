@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Alamofire
 
 protocol UserSignUpDelegate {
-   func userDidSignUp(status: Bool, message: String)
+   func userDidSignUp(_ status: Bool, message: String)
 }
 
 @IBDesignable class SignUpWidget: UIView {
@@ -24,15 +23,8 @@ protocol UserSignUpDelegate {
    @IBOutlet weak var password: UITextField!
    
     
-   @IBAction func SignUpBtn(sender: AnyObject) {
+   @IBAction func SignUpBtn(_ sender: AnyObject) {
       
-      FIRAuth.auth()?.createUserWithEmail(email.text!, password: password.text!, completion: { (user, error) -> Void in
-         if user != nil {
-            self.signUpDelegate?.userDidSignUp(true, message: "Welcome \(self.email.text)")
-         } else {
-            self.signUpDelegate?.userDidSignUp(false, message: (error?.localizedDescription)!)
-         }
-      })
    }
     
    // init
@@ -53,16 +45,16 @@ protocol UserSignUpDelegate {
    func setup() {
       signUpView = loadViewFromNib()
       signUpView.frame = bounds
-      signUpView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+      signUpView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
       
       addSubview(signUpView)
       
    }
    
    func loadViewFromNib() -> UIView {
-      let bundle = NSBundle(forClass: self.dynamicType)
+      let bundle = Bundle(for: type(of: self))
       let nib = UINib(nibName: nibName, bundle: bundle)
-      let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+      let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
       
       return view
    }

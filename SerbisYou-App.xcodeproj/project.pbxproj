@@ -18,6 +18,11 @@
 		C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */; };
 		C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */; };
 		C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */; };
+		C96CAC8A1DFD890900B38D9F /* LoginWdget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CAC891DFD890900B38D9F /* LoginWdget.swift */; };
+		C96CAC8C1DFD897300B38D9F /* LoginWdget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CAC8B1DFD897300B38D9F /* LoginWdget.xib */; };
+		C96CAC8E1DFD978500B38D9F /* SignUpWdget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CAC8D1DFD978500B38D9F /* SignUpWdget.xib */; };
+		C96CAC901DFD988900B38D9F /* SignUpWdget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CAC8F1DFD988900B38D9F /* SignUpWdget.swift */; };
+		C96CAC921DFE666600B38D9F /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CAC911DFE666600B38D9F /* UserAuthentication.swift */; };
 		C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5A01DC2178A001209E0 /* AppDelegate.swift */; };
 		C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A41DC2178A001209E0 /* Main.storyboard */; };
 		C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97AD5A71DC2178A001209E0 /* Assets.xcassets */; };
@@ -63,8 +68,13 @@
 		C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWidget.swift; sourceTree = "<group>"; };
 		C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWidget.swift; sourceTree = "<group>"; };
 		C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaAuthenticationViewController.swift; sourceTree = "<group>"; };
+		C96CAC891DFD890900B38D9F /* LoginWdget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWdget.swift; sourceTree = "<group>"; };
+		C96CAC8B1DFD897300B38D9F /* LoginWdget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWdget.xib; sourceTree = "<group>"; };
+		C96CAC8D1DFD978500B38D9F /* SignUpWdget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWdget.xib; sourceTree = "<group>"; };
+		C96CAC8F1DFD988900B38D9F /* SignUpWdget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWdget.swift; sourceTree = "<group>"; };
+		C96CAC911DFE666600B38D9F /* UserAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		C97AD59D1DC21789001209E0 /* SerbisYou-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SerbisYou-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C97AD5A01DC2178A001209E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C97AD5A01DC2178A001209E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		C97AD5A51DC2178A001209E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97AD5A71DC2178A001209E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97AD5B11DC2178A001209E0 /* SerbisYou-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SerbisYou-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */,
+				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
 				C97AD5EC1DC30143001209E0 /* HomeViewController.swift */,
 				C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */,
 			);
@@ -144,6 +155,10 @@
 				C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */,
 				C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */,
 				C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */,
+				C96CAC891DFD890900B38D9F /* LoginWdget.swift */,
+				C96CAC8B1DFD897300B38D9F /* LoginWdget.xib */,
+				C96CAC8D1DFD978500B38D9F /* SignUpWdget.xib */,
+				C96CAC8F1DFD988900B38D9F /* SignUpWdget.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -151,6 +166,7 @@
 		C929FD981DD5D00600B497E8 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C96CAC911DFE666600B38D9F /* UserAuthentication.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -194,7 +210,6 @@
 				C929FD981DD5D00600B497E8 /* models */,
 				C929FD931DD5CF5A00B497E8 /* views */,
 				C929FD901DD5CDD800B497E8 /* controllers */,
-				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
 				C97AD5A41DC2178A001209E0 /* Main.storyboard */,
 				C97AD5A71DC2178A001209E0 /* Assets.xcassets */,
 			);
@@ -309,13 +324,18 @@
 				TargetAttributes = {
 					C97AD59C1DC21789001209E0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = N6QSGUZ89X;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					C97AD5B01DC2178A001209E0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = C97AD59C1DC21789001209E0;
 					};
 					C97AD5BB1DC2178A001209E0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = C97AD59C1DC21789001209E0;
 					};
 				};
@@ -346,10 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */,
+				C96CAC8E1DFD978500B38D9F /* SignUpWdget.xib in Resources */,
 				C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */,
 				C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */,
 				C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */,
 				C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */,
+				C96CAC8C1DFD897300B38D9F /* LoginWdget.xib in Resources */,
 				C929FD971DD5CFCD00B497E8 /* SignUpWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,7 +525,10 @@
 				C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */,
 				C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */,
 				C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */,
+				C96CAC901DFD988900B38D9F /* SignUpWdget.swift in Sources */,
+				C96CAC8A1DFD890900B38D9F /* LoginWdget.swift in Sources */,
 				C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */,
+				C96CAC921DFE666600B38D9F /* UserAuthentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +661,9 @@
 			baseConfigurationReference = 285241CEF71606320923BD83 /* Pods-SerbisYou-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N6QSGUZ89X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -649,6 +677,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -657,6 +686,9 @@
 			baseConfigurationReference = D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N6QSGUZ89X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -670,6 +702,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -682,6 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SerbisYou-App.app/SerbisYou-App";
 			};
 			name = Debug;
@@ -695,6 +729,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SerbisYou-App.app/SerbisYou-App";
 			};
 			name = Release;
@@ -707,6 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "SerbisYou-App";
 				USES_XCTRUNNER = YES;
 			};
@@ -720,6 +756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eebasadre.swift.SerbisYou-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "SerbisYou-App";
 				USES_XCTRUNNER = YES;
 			};
