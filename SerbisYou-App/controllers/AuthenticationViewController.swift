@@ -78,9 +78,6 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
    
    func userDidPressedLoginButton(_ sender: UIButton) {
       loginWidget.loginDelegate = self
-      client_credentials["email"] = loginWidget?.email.text!
-      client_credentials["password"] = loginWidget?.password.text!
-      
       authViewModel.login(email: (loginWidget?.email.text!)!, password: (loginWidget?.password.text!)!, completionHandler: { ( response ) -> Void in
             if response["success"] == true {
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -98,37 +95,6 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
             }
             
       })
-      
-//      let request = Alamofire.request("http://localhost:3000\(createToken)", parameters: client_credentials)
-//      
-//      request.responseJSON { response in
-//         if ((response.response?.statusCode) == 200) {
-//            let resource = JSON(response.result.value!)
-//            let authentication = UserAuthentication(
-//               email: (self.loginWidget?.email.text!)!,
-//               access_token: resource["data"]["auth"]["access_token"].stringValue,
-//               refresh_token: resource["data"]["auth"]["refresh_token"].stringValue,
-//               expires_in: resource["data"]["auth"]["expires_in"].number as! Int,
-//               scope: resource["data"]["auth"]["public"].stringValue
-//            )
-//            self.saveAuthentication(authentication)
-//            
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
-//            self.present(homeViewController, animated: true, completion: nil)
-//
-//         } else {
-//            let error = JSON(response.result.value!)
-//            let errorAlert = UIAlertController(title: "SerbisYou", message: "Something error message", preferredStyle: UIAlertControllerStyle.alert)
-//            
-//            let okAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: { (action) -> Void in
-//               
-//            })
-//            
-//            errorAlert.addAction(okAction)
-//            self.present(errorAlert, animated: true, completion: nil)
-//         }
-//      }
    }
    
    // MARK: - SignUpWidget Delegate
