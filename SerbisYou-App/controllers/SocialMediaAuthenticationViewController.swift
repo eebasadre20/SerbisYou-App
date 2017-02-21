@@ -9,6 +9,8 @@
 import UIKit
 
 class SocialMediaAuthenticationViewController: UIViewController {
+   
+   var authCredential: UserAuthentication!
 
     @IBAction func AuthViaEmail(_ sender: AnyObject) {
         performSegue(withIdentifier: "AuthenticationView", sender: nil)
@@ -17,8 +19,14 @@ class SocialMediaAuthenticationViewController: UIViewController {
         
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      super.viewDidLoad()
+      authCredential = Session.sharedInstance.authSetup()
+      
+      if authCredential != nil {
+         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+         self.present(homeViewController, animated: true, completion: nil)
+      }
     }
    
     override func didReceiveMemoryWarning() {

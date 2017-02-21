@@ -50,15 +50,13 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
          self.view.addSubview(loginWidget)
       }
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-         loadAuthentication()
          signUpWidget = SignUpWidget(frame: CGRect(x: 0, y: 171, width: 375, height: 247))
          authenticationSegment.setEnabled(true, forSegmentAt: 0)
          signUpWidget.signUpDelegate = self
          self.view.addSubview(signUpWidget)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,19 +104,4 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
          print(message)
       }
    }
-       
-   fileprivate func saveAuthentication(_ userAuthentication: UserAuthentication ) {
-     let savedData = NSKeyedArchiver.archivedData(withRootObject: userAuthentication)
-     defaults.set(savedData, forKey: "userAuthentication")
-     defaults.synchronize()
-   }
-   
-   fileprivate func loadAuthentication() {
-      if let savedData = defaults.object(forKey: "userAuthentication") as? Data {
-         if let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
-               self.authCredential = authentication
-         }
-      }
-   }
-
 }

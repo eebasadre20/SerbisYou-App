@@ -12,10 +12,6 @@ import SwiftyJSON
 
 class AuthViewModel {
    
-   
-   let defaults = UserDefaults.standard
-   var authCredential: UserAuthentication!
-   
    private var loginManager: LoginManager!
    private var authManager: AuthManager = AuthManager()
 
@@ -28,20 +24,6 @@ class AuthViewModel {
       self.loginManager.login(email: email, password: password, completionHandler: { (loginResponse) in
          completionHandler(loginResponse)
       })
-   }
-   
-   func saveAuthentication(_ userAuthentication: UserAuthentication ) {
-      let savedData = NSKeyedArchiver.archivedData(withRootObject: userAuthentication)
-      defaults.set(savedData, forKey: "userAuthentication")
-      defaults.synchronize()
-   }
-   
-   func loadAuthentication() {
-      if let savedData = defaults.object(forKey: "userAuthentication") as? Data {
-         if let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
-            // authCredential = authentication
-         }
-      }
    }
    
 }
