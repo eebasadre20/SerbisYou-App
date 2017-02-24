@@ -10,10 +10,10 @@ import UIKit
 import GoogleMaps
 
 class HomeViewController: UIViewController {
-    let session = Session.sharedInstance
+    let loginManager = LoginManager.sharedloginInstance
    
     @IBAction func didTapLogout(_ sender: AnyObject) {
-      session.logout()
+      loginManager.logout()
       self.dismiss(animated: true, completion: nil)
     }
    
@@ -35,11 +35,7 @@ class HomeViewController: UIViewController {
         currentUser()
    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     func reverseGeocoderCoordinate(_ coordinate: CLLocationCoordinate2D) {
         
         let geocoder = GMSGeocoder()

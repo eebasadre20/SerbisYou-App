@@ -9,5 +9,24 @@
 import Foundation
 
 class AuthManager {
- 
+   let defaults = UserDefaults.standard
+   private var authCredential: UserAuthentication!
+   
+   static let sharedAuthInstance = AuthManager()
+   
+   func saveAuthentication(_ userAuthentication: UserAuthentication ) {
+      let savedData = NSKeyedArchiver.archivedData(withRootObject: userAuthentication)
+      defaults.set(savedData, forKey: "userAuthentication")
+      defaults.synchronize()
+   }
+   
+   func loadAuthentication() -> UserAuthentication? {
+      if let savedData = defaults.object(forKey: "userAuthentication") as? Data, let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
+         authCredential = authentication
+      } else {
+         authCredential = nil
+      }
+      
+      return authCredential
+   }
 }

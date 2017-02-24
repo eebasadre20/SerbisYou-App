@@ -27,7 +27,8 @@ class UserAuthentication: NSObject, NSCoding {
 
    override init() {}
    
-   init(email: String, access_token: String, refresh_token: String, expires_in: Int, scope: String) {
+   init(is_sign_in: Bool, email: String, access_token: String, refresh_token: String, expires_in: Int, scope: String) {
+      self._is_sign_in = is_sign_in
       self._email = email
       self._access_token = access_token
       self._refresh_token = refresh_token
@@ -36,6 +37,10 @@ class UserAuthentication: NSObject, NSCoding {
    }
    
    required init(coder decoder: NSCoder) {
+      if let _is_sign_inObj = decoder.decodeObject(forKey: Keys.IsSignIn) as? Bool {
+         _is_sign_in = _is_sign_inObj
+      }
+      
       if let emailObj = decoder.decodeObject(forKey: Keys.Email) as? String {
          _email = emailObj
       }
@@ -59,11 +64,21 @@ class UserAuthentication: NSObject, NSCoding {
    }
    
    func encode(with aCoder: NSCoder) {
+      aCoder.encode(_is_sign_in, forKey: Keys.IsSignIn)
       aCoder.encode(_email, forKey: Keys.Email)
       aCoder.encode(_access_token, forKey: Keys.AccessToken)
       aCoder.encode(_refresh_token, forKey: Keys.RefreshToken)
       aCoder.encode(_expires_in, forKey: Keys.ExpiresIn)
       aCoder.encode(_scope, forKey: Keys.Scope)
+   }
+   
+   var IsSignIn: Bool {
+      get {
+         return _is_sign_in
+      }
+      set {
+         _is_sign_in = newValue
+      }
    }
    
    var Email: String {

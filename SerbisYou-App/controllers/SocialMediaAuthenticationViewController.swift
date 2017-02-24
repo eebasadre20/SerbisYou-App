@@ -21,8 +21,8 @@ class SocialMediaAuthenticationViewController: UIViewController {
    
     override func viewDidLoad() {
       super.viewDidLoad()
-      if let auth: UserAuthentication = Session.sharedInstance.loadAuthentication() {
-         if !auth.Email.isEmpty {
+      if let auth: UserAuthentication = AuthManager.sharedAuthInstance.loadAuthentication() {
+         if auth.IsSignIn {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
             self.present(homeViewController, animated: true, completion: nil)

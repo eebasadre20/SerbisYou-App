@@ -17,7 +17,7 @@ class AuthViewModel {
 
    
    init() {
-      self.loginManager = LoginManager.sharedInstance
+      self.loginManager = LoginManager.sharedloginInstance
    }
    
    func login(email: String, password: String, completionHandler: @escaping (JSON) -> ()) {
