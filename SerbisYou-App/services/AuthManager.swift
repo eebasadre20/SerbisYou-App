@@ -9,7 +9,7 @@
 import Foundation
 
 class AuthManager {
-   let defaults = UserDefaults.standard
+   private let defaults = UserDefaults.standard
    private var authCredential: UserAuthentication!
    
    static let sharedAuthInstance = AuthManager()

@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-class LoginManager: AuthManager {
+class LoginManager {
    let createToken: String = "/api/oauth/token"
    var client_credentials = [
       "client_id": "016c2177d2534dd1746cbcf8d0953de8d5833bcffdee5491ed993d1132b14b97",
@@ -19,6 +19,8 @@ class LoginManager: AuthManager {
    ]
    
    static let sharedloginInstance = LoginManager()
+   private let defaults = UserDefaults.standard
+   private let authManager = AuthManager.sharedAuthInstance
    
    func login(email: String, password: String, completionHandler: @escaping (JSON) -> ()) {
       client_credentials["email"] = email
@@ -37,7 +39,7 @@ class LoginManager: AuthManager {
                scope: resource["data"]["auth"]["public"].stringValue
             )
             
-            self.saveAuthentication(authentication)
+            self.authManager.saveAuthentication(authentication)
             completionHandler(resource)
          } else {
             let error = JSON(response.result.value!)
@@ -47,7 +49,7 @@ class LoginManager: AuthManager {
    }
    
    func logout() {
-      super.defaults.removeObject(forKey: "userAuthentication")
-      super.defaults.synchronize()
+      defaults.removeObject(forKey: "userAuthentication")
+      defaults.synchronize()
    }
 }
