@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import FBSDKCoreKit
 
 
 @UIApplicationMain
@@ -15,16 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let googleMapsApiKey = "AIzaSyD8M-DB1zocR9u2cBa7SrV_-ieYPaAzOHg"
+    // let googleMapsApiKey = "AIzaSyD8M-DB1zocR9u2cBa7SrV_-ieYPaAzOHg"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey(googleMapsApiKey)
+        // GMSServices.provideAPIKey(googleMapsApiKey)
+      
+         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+      
         return true
     }
    
    @objc func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-       return true
+      
+//      BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+//         openURL:url
+//         sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//         annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+//      ];
+//      // Add any custom logic here.
+//      return handled;
+      
+      let handled = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+      
+       return handled
    }
 
     func applicationWillResignActive(_ application: UIApplication) {

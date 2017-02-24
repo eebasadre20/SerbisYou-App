@@ -1,5 +1,17 @@
 PODS:
   - Alamofire (4.0.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.19.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.19.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.19.0):
+    - FBSDKCoreKit
   - GoogleAppUtilities (1.1.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GoogleAuthUtilities (2.0.2):
@@ -26,6 +38,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.0.0)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
@@ -33,16 +48,20 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
+  FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
+  FBSDKShareKit: 5953758366278430dc322d5cdc906db361ed7f81
   GoogleAppUtilities: a8a552aa74f6597f805e45b5a3962766c3134973
   GoogleAuthUtilities: ccad2e0a9284699973ff57c0dd24c3893657fda4
-  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
+  GoogleMaps: '06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c'
   GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
   GooglePlaces: 16e96266483b8010e9f275399403647978523c86
-  GoogleSignIn: 09036ed61f8e75f1424100d63f7719480b2428c3
+  GoogleSignIn: '09036ed61f8e75f1424100d63f7719480b2428c3'
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
 
-PODFILE CHECKSUM: 82dbfc14e14fa9af577c5f4fb8d55bdad1e9f3f3
+PODFILE CHECKSUM: 19e5c0c22c1678ec4b0eea42cc08257dcb3ddaf7
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

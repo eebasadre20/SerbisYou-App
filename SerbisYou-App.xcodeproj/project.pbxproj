@@ -65,6 +65,7 @@
 		981184E01E59E527006C365A /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		981184E31E59E596006C365A /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		981184E41E59E596006C365A /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		982EE00E1E607CAA00ED70C7 /* SerbisYou-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SerbisYou-App.entitlements"; sourceTree = "<group>"; };
 		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C929FD911DD5CF2300B497E8 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
@@ -229,6 +230,7 @@
 		C97AD59F1DC21789001209E0 /* SerbisYou-App */ = {
 			isa = PBXGroup;
 			children = (
+				982EE00E1E607CAA00ED70C7 /* SerbisYou-App.entitlements */,
 				981184E21E59E596006C365A /* services */,
 				981184DF1E59E527006C365A /* ViewModels */,
 				C929FD991DD5D06500B497E8 /* config */,
@@ -326,6 +328,7 @@
 				C97AD5B91DC2178A001209E0 /* Frameworks */,
 				C97AD5BA1DC2178A001209E0 /* Resources */,
 				9DE0ED1226CDFCADDB54D71A /* [CP] Copy Pods Resources */,
+				C3ABF281D95C4074F3CC2CF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,6 +355,11 @@
 						DevelopmentTeam = N6QSGUZ89X;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					C97AD5B01DC2178A001209E0 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -475,7 +483,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9360A77FDD81A1DF08270A66 /* [CP] Check Pods Manifest.lock */ = {
@@ -490,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		94ADB4BB04602F8AA86F948C /* [CP] Embed Pods Frameworks */ = {
@@ -520,7 +528,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9DE0ED1226CDFCADDB54D71A /* [CP] Copy Pods Resources */ = {
@@ -536,6 +544,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3ABF281D95C4074F3CC2CF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SerbisYou-AppUITests/Pods-SerbisYou-AppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -689,6 +712,7 @@
 			baseConfigurationReference = 285241CEF71606320923BD83 /* Pods-SerbisYou-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SerbisYou-App/SerbisYou-App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N6QSGUZ89X;
@@ -714,6 +738,7 @@
 			baseConfigurationReference = D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SerbisYou-App/SerbisYou-App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N6QSGUZ89X;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class SerbisYouViewController: UIViewController {
    
@@ -18,9 +19,22 @@ class SerbisYouViewController: UIViewController {
     @IBAction func segueSample(_ sender: AnyObject) {
         
     }
+    
+    
+    @IBAction func fbDidTapLogin(_ sender: Any) {
+        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) { (result, error) in
+            if error != nil {
+                print("EDSIL")
+            }
+            
+            print(result?.token.tokenString)
+        }
+    }
+    
    
     override func viewDidLoad() {
       super.viewDidLoad()
+      
       if let auth: UserAuthentication = AuthManager.sharedAuthInstance.loadAuthentication() {
          if auth.IsSignIn {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -28,6 +42,7 @@ class SerbisYouViewController: UIViewController {
             self.present(homeViewController, animated: true, completion: nil)
          }
       }
+        
    }
    
    override func viewWillAppear(_ animated: Bool) {

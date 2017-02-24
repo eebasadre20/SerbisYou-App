@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1CD61ABBFF1F489C3FF3773D5182F930"
+               BlueprintIdentifier = "B151A1B668A726B8C0FB96AC1B1D5D55"
                BuildableName = "Pods_SerbisYou_App.framework"
                BlueprintName = "Pods-SerbisYou-App"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1CD61ABBFF1F489C3FF3773D5182F930"
+            BlueprintIdentifier = "B151A1B668A726B8C0FB96AC1B1D5D55"
             BuildableName = "Pods_SerbisYou_App.framework"
             BlueprintName = "Pods-SerbisYou-App"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1CD61ABBFF1F489C3FF3773D5182F930"
-            BuildableName = "Pods_SerbisYou_App.framework"
-            BlueprintName = "Pods-SerbisYou-App"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

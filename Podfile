@@ -6,11 +6,9 @@ target 'SerbisYou-App' do
   use_frameworks!
 
   # Pods for SerbisYou-App
-#  pod 'Firebase/Core'
-#  pod 'Firebase/Auth'
-#  pod 'FBSDKCoreKit'
-#  pod 'FBSDKLoginKit'
-#  pod 'FBSDKShareKit'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GoogleSignIn'
