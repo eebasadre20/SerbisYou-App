@@ -13,14 +13,14 @@
 		981184E51E59E596006C365A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E31E59E596006C365A /* AuthManager.swift */; };
 		981184E61E59E596006C365A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E41E59E596006C365A /* LoginManager.swift */; };
 		BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */; };
-		C929FD921DD5CF2300B497E8 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */; };
+		C929FD921DD5CF2300B497E8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD911DD5CF2300B497E8 /* AuthViewController.swift */; };
 		C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */; };
 		C929FD971DD5CFCD00B497E8 /* SignUpWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */; };
 		C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */; };
 		C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9B1DD5D0C000B497E8 /* Info.plist */; };
 		C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */; };
 		C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */; };
-		C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */; };
+		C95054E61DD5E25B00E6296B /* SerbisYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95054E51DD5E25B00E6296B /* SerbisYouViewController.swift */; };
 		C96CAC8A1DFD890900B38D9F /* LoginWdget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CAC891DFD890900B38D9F /* LoginWdget.swift */; };
 		C96CAC8C1DFD897300B38D9F /* LoginWdget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CAC8B1DFD897300B38D9F /* LoginWdget.xib */; };
 		C96CAC8E1DFD978500B38D9F /* SignUpWdget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CAC8D1DFD978500B38D9F /* SignUpWdget.xib */; };
@@ -35,7 +35,7 @@
 		C97AD5E51DC22BCC001209E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */; };
 		C97AD5E61DC22BCC001209E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */; };
 		C97AD5E71DC22BCC001209E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */; };
-		C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5EC1DC30143001209E0 /* HomeViewController.swift */; };
+		C97AD5ED1DC30143001209E0 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AD5EC1DC30143001209E0 /* IndexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +66,14 @@
 		981184E31E59E596006C365A /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		981184E41E59E596006C365A /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		C929FD911DD5CF2300B497E8 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
 		C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWidget.xib; sourceTree = "<group>"; };
 		C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C929FD9B1DD5D0C000B497E8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWidget.swift; sourceTree = "<group>"; };
 		C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWidget.swift; sourceTree = "<group>"; };
-		C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaAuthenticationViewController.swift; sourceTree = "<group>"; };
+		C95054E51DD5E25B00E6296B /* SerbisYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerbisYouViewController.swift; sourceTree = "<group>"; };
 		C96CAC891DFD890900B38D9F /* LoginWdget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWdget.swift; sourceTree = "<group>"; };
 		C96CAC8B1DFD897300B38D9F /* LoginWdget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWdget.xib; sourceTree = "<group>"; };
 		C96CAC8D1DFD978500B38D9F /* SignUpWdget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWdget.xib; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		C97AD5E11DC22BCC001209E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		C97AD5E21DC22BCC001209E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		C97AD5E31DC22BCC001209E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
-		C97AD5EC1DC30143001209E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C97AD5EC1DC30143001209E0 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		D05510FE8B00A062B98FFBEB /* Pods-SerbisYou-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerbisYou-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerbisYou-App/Pods-SerbisYou-App.release.xcconfig"; sourceTree = "<group>"; };
 		DC69421E79B89449414A5940 /* Pods_SerbisYou_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,10 +163,10 @@
 		C929FD901DD5CDD800B497E8 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C929FD911DD5CF2300B497E8 /* AuthenticationViewController.swift */,
+				C929FD911DD5CF2300B497E8 /* AuthViewController.swift */,
 				C97AD5A01DC2178A001209E0 /* AppDelegate.swift */,
-				C97AD5EC1DC30143001209E0 /* HomeViewController.swift */,
-				C95054E51DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift */,
+				C97AD5EC1DC30143001209E0 /* IndexViewController.swift */,
+				C95054E51DD5E25B00E6296B /* SerbisYouViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -546,10 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				981184E11E59E527006C365A /* AuthViewModel.swift in Sources */,
-				C929FD921DD5CF2300B497E8 /* AuthenticationViewController.swift in Sources */,
+				C929FD921DD5CF2300B497E8 /* AuthViewController.swift in Sources */,
 				C97AD5A11DC2178A001209E0 /* AppDelegate.swift in Sources */,
-				C95054E61DD5E25B00E6296B /* SocialMediaAuthenticationViewController.swift in Sources */,
-				C97AD5ED1DC30143001209E0 /* HomeViewController.swift in Sources */,
+				C95054E61DD5E25B00E6296B /* SerbisYouViewController.swift in Sources */,
+				C97AD5ED1DC30143001209E0 /* IndexViewController.swift in Sources */,
 				981184E61E59E596006C365A /* LoginManager.swift in Sources */,
 				C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */,
 				C96CAC901DFD988900B38D9F /* SignUpWdget.swift in Sources */,

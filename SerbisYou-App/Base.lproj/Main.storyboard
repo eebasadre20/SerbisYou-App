@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YkV-P9-fct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YkV-P9-fct">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Social Media Authentication View Controller-->
+        <!--Serbis You View Controller-->
         <scene sceneID="rMB-up-Xy6">
             <objects>
-                <viewController id="hRk-WL-QpT" customClass="SocialMediaAuthenticationViewController" customModule="SerbisYou_App" sceneMemberID="viewController">
+                <viewController id="hRk-WL-QpT" customClass="SerbisYouViewController" customModule="SerbisYou_App" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SLO-5D-3aZ"/>
                         <viewControllerLayoutGuide type="bottom" id="CWW-j3-KSz"/>
@@ -42,7 +46,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XTA-oT-Ine" firstAttribute="leading" secondItem="tNx-YW-rlB" secondAttribute="leading" constant="100" id="4BC-wc-zzj"/>
                             <constraint firstItem="JcI-uK-ylc" firstAttribute="leading" secondItem="tNx-YW-rlB" secondAttribute="leadingMargin" constant="50" id="F1F-86-dKk"/>
@@ -53,19 +57,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RhU-Qz-npo"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="qZ3-Ab-elE" kind="show" identifier="AuthenticationView" id="TZU-Kr-ZXi"/>
+                        <segue destination="qZ3-Ab-elE" kind="show" identifier="AuthView" id="TZU-Kr-ZXi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-wk-yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483.5" y="316.5"/>
+            <point key="canvasLocation" x="1337" y="316"/>
         </scene>
-        <!--Authentication View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="4Vu-SW-D04">
             <objects>
-                <viewController id="qZ3-Ab-elE" customClass="AuthenticationViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qZ3-Ab-elE" customClass="AuthViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sf3-wW-pJE"/>
                         <viewControllerLayoutGuide type="bottom" id="W5a-NJ-OPX"/>
@@ -76,7 +79,7 @@
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-a1-PGZ" colorLabel="IBBuiltInLabel-Yellow">
                                 <rect key="frame" x="177" y="324" width="20" height="20"/>
-                                <color key="color" red="1" green="0.73574644613642393" blue="0.22345489805042507" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="1" green="0.73574644613642393" blue="0.22345489805042507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-mP-t4j">
                                 <rect key="frame" x="127" y="45" width="121" height="29"/>
@@ -87,17 +90,18 @@
                                     <segment title="Sign up"/>
                                     <segment title="Login"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.73574644609999995" blue="0.22345489809999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.73574644609999995" blue="0.22345489809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="authenticationSegment:" destination="qZ3-Ab-elE" eventType="valueChanged" id="hJl-fR-thB"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-m7-KHP">
                                 <rect key="frame" x="0.0" y="171" width="375" height="247"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="V1x-mP-t4j" firstAttribute="centerX" secondItem="79A-6U-i7j" secondAttribute="centerX" id="nBk-Wg-yXa"/>
                             <constraint firstItem="V1x-mP-t4j" firstAttribute="top" secondItem="sf3-wW-pJE" secondAttribute="bottom" constant="25" id="nIv-Gs-fE8"/>
@@ -106,21 +110,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BRj-we-c40"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="authenticationSegment" destination="V1x-mP-t4j" id="NJ8-r6-Ghg"/>
                         <outlet property="loadingSpinner" destination="oTV-a1-PGZ" id="1D1-pD-wEC"/>
-                        <segue destination="VHv-yk-9WR" kind="show" identifier="HomeView" id="13K-Kg-JRH"/>
+                        <segue destination="VHv-yk-9WR" kind="show" identifier="IndexView" id="13K-Kg-JRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-WT-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126.5" y="303.5"/>
+            <point key="canvasLocation" x="2124" y="315"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Index View Controller-->
         <scene sceneID="UQg-kY-ef1">
             <objects>
-                <viewController storyboardIdentifier="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VHv-yk-9WR" customClass="HomeViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IndexView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VHv-yk-9WR" customClass="IndexViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jtL-qC-O9p"/>
                         <viewControllerLayoutGuide type="bottom" id="ePR-m6-fTg"/>
@@ -132,7 +135,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoZ-4h-De3">
                                 <rect key="frame" x="162" y="33" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0P-L6-eAp">
@@ -145,7 +148,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-ww-9cE">
                                 <rect key="frame" x="0.0" y="646" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-U5-vA6">
@@ -154,15 +157,15 @@
                                     <constraint firstAttribute="width" constant="100" id="EnR-jc-RGG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bug-cO-bao" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="67" width="375" height="571"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bug-cO-bao" firstAttribute="top" secondItem="L0P-L6-eAp" secondAttribute="bottom" constant="8" id="1d7-kY-0nC"/>
                             <constraint firstItem="Clf-U5-vA6" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="6" id="3HB-6e-HIF"/>
@@ -176,7 +179,6 @@
                             <constraint firstItem="ePR-m6-fTg" firstAttribute="top" secondItem="dmc-ww-9cE" secondAttribute="bottom" id="ztm-h9-fx2"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressLabel" destination="dmc-ww-9cE" id="54O-UH-7b8"/>
                         <outlet property="currentUserLbl" destination="Clf-U5-vA6" id="FXd-Ak-9Lg"/>
@@ -185,15 +187,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613.5" y="303.5"/>
+            <point key="canvasLocation" x="2892" y="314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Cz-Vm-GyN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YkV-P9-fct" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vv5-ad-ab9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Vv5-ad-ab9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -208,7 +209,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vdm-tx-S2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="327"/>
+            <point key="canvasLocation" x="601" y="316"/>
         </scene>
     </scenes>
 </document>

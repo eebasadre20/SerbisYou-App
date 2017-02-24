@@ -14,9 +14,7 @@ protocol UserLoginDelegate: class {
    func userDidPressedLoginButton(_ sender: UIButton)
 }
 
-@IBDesignable class LoginWidget: UIView {   
-   let createToken: String = "/api/oauth/token"
-
+@IBDesignable class LoginWidget: UIView {
    weak var loginDelegate: UserLoginDelegate?
    var loginView: UIView!
    var nibName: String = "LoginWidget"
@@ -31,6 +29,7 @@ protocol UserLoginDelegate: class {
    @IBAction func loginBtn(_ sender: AnyObject) {
       self.loginDelegate?.userDidPressedLoginButton(sender as! UIButton)
    }
+   
    // init
    override init(frame: CGRect) {
       super.init(frame: frame)

@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class HomeViewController: UIViewController {
+class IndexViewController: UIViewController {
     let loginManager = LoginManager.sharedloginInstance
    
     @IBAction func didTapLogout(_ sender: AnyObject) {
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: CLLocationManagerDelegate {
+extension IndexViewController: CLLocationManagerDelegate {
    
    @objc func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
       if status == .authorizedWhenInUse {
@@ -80,7 +80,7 @@ extension HomeViewController: CLLocationManagerDelegate {
    }
 }
 
-extension HomeViewController: GMSMapViewDelegate {
+extension IndexViewController: GMSMapViewDelegate {
    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
       reverseGeocoderCoordinate(position.target)
    }

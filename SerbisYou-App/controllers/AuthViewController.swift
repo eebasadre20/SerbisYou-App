@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSignUpDelegate {
+class AuthViewController: UIViewController, UserLoginDelegate, UserSignUpDelegate {
    private var authViewModel = AuthViewModel()
    
    var authCredential: UserAuthentication!
@@ -50,7 +50,7 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
       authViewModel.login(email: (loginWidget?.email.text!)!, password: (loginWidget?.password.text!)!, completionHandler: { ( response ) -> Void in
             if response["success"] == true {
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+               let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "IndexView")
                self.present(homeViewController, animated: true, completion: nil)
             } else {
                let errorAlert = UIAlertController(title: "SerbisYou", message: "Something error message", preferredStyle: UIAlertControllerStyle.alert)

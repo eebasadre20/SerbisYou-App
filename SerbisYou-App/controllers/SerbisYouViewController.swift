@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SocialMediaAuthenticationViewController: UIViewController {
+class SerbisYouViewController: UIViewController {
    
    var authCredential: UserAuthentication!
 
     @IBAction func AuthViaEmail(_ sender: AnyObject) {
-        performSegue(withIdentifier: "AuthenticationView", sender: nil)
+        performSegue(withIdentifier: "AuthView", sender: nil)
     }
     @IBAction func segueSample(_ sender: AnyObject) {
         
@@ -24,7 +24,7 @@ class SocialMediaAuthenticationViewController: UIViewController {
       if let auth: UserAuthentication = AuthManager.sharedAuthInstance.loadAuthentication() {
          if auth.IsSignIn {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+            let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "IndexView")
             self.present(homeViewController, animated: true, completion: nil)
          }
       }
