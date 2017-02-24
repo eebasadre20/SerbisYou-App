@@ -18,21 +18,17 @@ class SocialMediaAuthenticationViewController: UIViewController {
     @IBAction func segueSample(_ sender: AnyObject) {
         
     }
+   
     override func viewDidLoad() {
       super.viewDidLoad()
-      authCredential = Session.sharedInstance.authSetup()
-      
-      if authCredential != nil {
-         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-         let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
-         self.present(homeViewController, animated: true, completion: nil)
+      if let auth: UserAuthentication = Session.sharedInstance.loadAuthentication() {
+         if !auth.Email.isEmpty {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+            self.present(homeViewController, animated: true, completion: nil)
+         }
       }
-    }
-   
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   }
    
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
@@ -43,18 +39,4 @@ class SocialMediaAuthenticationViewController: UIViewController {
       super.viewWillDisappear(animated)
       self.navigationController?.isNavigationBarHidden = false
    }
-   
-   
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -11,22 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSignUpDelegate {
-   let createToken: String = "/api/oauth/token"
-   let defaults = UserDefaults.standard
    private var authViewModel = AuthViewModel()
-   
-   var client_credentials = [
-            "client_id": "f03d734be207c62a5e757ca9d685a0176fc473b724ccff5a282912f8e6578f93",
-            "client_secret": "1f71dc1f4bc1e6c7b92bf860e666a188d9556bb666413261549c48ad78870a6d",
-            "grant_type": "password"
-         ]
-   
-   var filePath: String {
-      let manager = FileManager.default
-      let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first
-      
-      return (url?.appendingPathComponent("AuthenticationDetails").path)!
-   }
    
    var authCredential: UserAuthentication!
    var signUpWidget: SignUpWidget!
@@ -59,20 +44,6 @@ class AuthenticationViewController: UIViewController, UserLoginDelegate, UserSig
          self.view.addSubview(signUpWidget)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-   
-   
-   // MARK: - LoginWidget Delegate
-
-   func userDidLogin(_ status: Bool, message: String) {
-      if status == true {
-      } else {
-         
-      }
-   }
    
    func userDidPressedLoginButton(_ sender: UIButton) {
       loginWidget.loginDelegate = self

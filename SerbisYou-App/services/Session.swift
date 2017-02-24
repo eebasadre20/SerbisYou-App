@@ -20,17 +20,21 @@ class Session {
       defaults.synchronize()
    }
    
-   func authSetup() -> UserAuthentication {
-      return self.loadAuthentication()
+   
+   func logout() {
+      defaults.removeObject(forKey: "userAuthentication")
+      defaults.synchronize()
    }
    
-   private func loadAuthentication() -> UserAuthentication {
-      if let savedData = defaults.object(forKey: "userAuthentication") as? Data {
-         if let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
+   func loadAuthentication() -> UserAuthentication? {
+      if let savedData = defaults.object(forKey: "userAuthentication") as? Data, let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
             authCredential = authentication
-         }
+      } else {
+         authCredential = nil
       }
       
       return authCredential
    }
 }
+      
+

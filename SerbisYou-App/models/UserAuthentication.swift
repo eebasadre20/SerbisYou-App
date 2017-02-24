@@ -10,6 +10,7 @@ import Foundation
 
 class UserAuthentication: NSObject, NSCoding {
    struct Keys {
+      static let IsSignIn = "is_sign_in"
       static let Email = "email"
       static let AccessToken = "access_token"
       static let RefreshToken = "refresh_token"
@@ -17,6 +18,7 @@ class UserAuthentication: NSObject, NSCoding {
       static let Scope = "scope"
    }
    
+   fileprivate var _is_sign_in = false
    fileprivate var _email = "";
    fileprivate var _access_token = "";
    fileprivate var _refresh_token = "";
@@ -66,46 +68,46 @@ class UserAuthentication: NSObject, NSCoding {
    
    var Email: String {
       get {
-         return _email;
+         return _email
       }
       set {
-         _email = newValue;
+         _email = newValue
       }
    }
    
    var AccessToken: String {
       get {
-         return _access_token;
+         return _access_token
       }
       set {
-         _access_token = newValue;
+         _access_token = newValue
       }
    }
    
    var RefreshToken: String {
       get {
-         return _refresh_token;
+         return _refresh_token
       }
       set {
-         _refresh_token = newValue;
+         _refresh_token = newValue
       }
    }
    
    var ExpiresIn: Int {
       get {
-         return _expires_in;
+         return _expires_in
       }
       set {
-         _expires_in = newValue;
+         _expires_in = newValue
       }
    }
    
    var Scope: String {
       get {
-         return _scope;
+         return _scope
       }
       set {
-         _scope = newValue;
+         _scope = newValue
       }
    }
 }

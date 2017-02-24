@@ -10,7 +10,10 @@ import UIKit
 import GoogleMaps
 
 class HomeViewController: UIViewController {
+    let session = Session.sharedInstance
+   
     @IBAction func didTapLogout(_ sender: AnyObject) {
+      session.logout()
       self.dismiss(animated: true, completion: nil)
     }
    
@@ -24,13 +27,11 @@ class HomeViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         mapView.delegate = self
       
-        loadAuthentication()
         currentUser()
    }
 
@@ -62,16 +63,6 @@ class HomeViewController: UIViewController {
          currentUserLbl.text = self.authCredential.Email.components(separatedBy: "@").first
       }
     }
-   
-   fileprivate func loadAuthentication() {
-      if let savedData = defaults.object(forKey: "userAuthentication") as? Data {
-         if let authentication = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? UserAuthentication {
-            self.authCredential = authentication
-         }
-      }
-   }
-   
-
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
