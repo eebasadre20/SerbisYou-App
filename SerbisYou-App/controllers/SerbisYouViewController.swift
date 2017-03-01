@@ -12,6 +12,7 @@ import FBSDKLoginKit
 class SerbisYouViewController: UIViewController {
    
    var authCredential: UserAuthentication!
+   var authViewModel: AuthViewModel = AuthViewModel()
 
     @IBAction func AuthViaEmail(_ sender: AnyObject) {
         performSegue(withIdentifier: "AuthView", sender: nil)
@@ -22,15 +23,20 @@ class SerbisYouViewController: UIViewController {
     
     
     @IBAction func fbDidTapLogin(_ sender: Any) {
-        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) { (result, error) in
-            if error != nil {
-                print("EDSIL")
-            }
-            
-            print(result?.token.tokenString)
-        }
+      authViewModel.loginWithFacebook(controller: self) { (response, error) in
+         guard error == nil else {
+            print("Error: \(error)")
+            return
+         }
+         
+         if response?["success"] == true {
+            print("Successfully Authenticated")
+         } else {
+            print("Failed Authenticated")
+         }
+      }
+        
     }
-    
    
     override func viewDidLoad() {
       super.viewDidLoad()

@@ -12,12 +12,12 @@
 		981184E11E59E527006C365A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E01E59E527006C365A /* AuthViewModel.swift */; };
 		981184E51E59E596006C365A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E31E59E596006C365A /* AuthManager.swift */; };
 		981184E61E59E596006C365A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E41E59E596006C365A /* LoginManager.swift */; };
+		984E45C91E6700C100ADC3DA /* FBUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E45C81E6700C100ADC3DA /* FBUserData.swift */; };
 		BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */; };
 		C929FD921DD5CF2300B497E8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD911DD5CF2300B497E8 /* AuthViewController.swift */; };
 		C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */; };
 		C929FD971DD5CFCD00B497E8 /* SignUpWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD951DD5CFCD00B497E8 /* SignUpWidget.xib */; };
 		C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9A1DD5D0C000B497E8 /* GoogleService-Info.plist */; };
-		C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C929FD9B1DD5D0C000B497E8 /* Info.plist */; };
 		C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9E1DD5D0DC00B497E8 /* LoginWidget.swift */; };
 		C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD9F1DD5D0DC00B497E8 /* SignUpWidget.swift */; };
 		C95054E61DD5E25B00E6296B /* SerbisYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95054E51DD5E25B00E6296B /* SerbisYouViewController.swift */; };
@@ -66,6 +66,7 @@
 		981184E31E59E596006C365A /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		981184E41E59E596006C365A /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		982EE00E1E607CAA00ED70C7 /* SerbisYou-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SerbisYou-App.entitlements"; sourceTree = "<group>"; };
+		984E45C81E6700C100ADC3DA /* FBUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUserData.swift; sourceTree = "<group>"; };
 		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C929FD911DD5CF2300B497E8 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				C96CAC911DFE666600B38D9F /* UserAuthentication.swift */,
+				984E45C81E6700C100ADC3DA /* FBUserData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -347,7 +349,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = eebasadre.co;
 				TargetAttributes = {
 					C97AD59C1DC21789001209E0 = {
@@ -401,7 +403,6 @@
 				C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */,
 				C96CAC8E1DFD978500B38D9F /* SignUpWdget.xib in Resources */,
 				C97AD5A81DC2178A001209E0 /* Assets.xcassets in Resources */,
-				C929FD9D1DD5D0C000B497E8 /* Info.plist in Resources */,
 				C929FD9C1DD5D0C000B497E8 /* GoogleService-Info.plist in Resources */,
 				C97AD5A61DC2178A001209E0 /* Main.storyboard in Resources */,
 				C96CAC8C1DFD897300B38D9F /* LoginWdget.xib in Resources */,
@@ -579,6 +580,7 @@
 				C96CAC8A1DFD890900B38D9F /* LoginWdget.swift in Sources */,
 				981184E51E59E596006C365A /* AuthManager.swift in Sources */,
 				C929FDA11DD5D0DC00B497E8 /* SignUpWidget.swift in Sources */,
+				984E45C91E6700C100ADC3DA /* FBUserData.swift in Sources */,
 				C96CAC921DFE666600B38D9F /* UserAuthentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,8 +641,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -683,8 +687,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -703,6 +709,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

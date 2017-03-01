@@ -9,11 +9,13 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import FBSDKLoginKit
 
 class AuthViewModel {
    
    private var loginManager: LoginManager!
    private var authManager: AuthManager = AuthManager()
+   private var fbUserData: FBUserData = FBUserData()
 
    
    init() {
@@ -25,5 +27,18 @@ class AuthViewModel {
          completionHandler(loginResponse)
       })
    }
+   
+   func loginWithFacebook(controller: UIViewController, completionHandler: @escaping (_ response: JSON?, _ errorResponse: Error?)-> ()) {
+
+      loginManager.loginWithFacebook(controller: controller) { (response, error) in
+         guard error == nil else {
+            completionHandler(nil, error!)
+            return
+         }
+         
+         completionHandler(response, nil)
+      }
+   }
+
    
 }
