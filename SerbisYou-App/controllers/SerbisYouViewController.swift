@@ -30,12 +30,21 @@ class SerbisYouViewController: UIViewController {
          }
          
          if response?["success"] == true {
-            print("Successfully Authenticated")
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "IndexView")
+            self.present(homeViewController, animated: true, completion: nil)
          } else {
-            print("Failed Authenticated")
+            let errorAlert = UIAlertController(title: "SerbisYou", message: "Something error message", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+               
+            })
+            
+            errorAlert.addAction(okAction)
+            self.present(errorAlert, animated: true, completion: nil)
          }
       }
-        
+      
     }
    
     override func viewDidLoad() {

@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    // let googleMapsApiKey = "AIzaSyD8M-DB1zocR9u2cBa7SrV_-ieYPaAzOHg"
+    let googleMapsApiKey = "AIzaSyD8M-DB1zocR9u2cBa7SrV_-ieYPaAzOHg"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // GMSServices.provideAPIKey(googleMapsApiKey)
+         GMSServices.provideAPIKey(googleMapsApiKey)
       
          FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
       

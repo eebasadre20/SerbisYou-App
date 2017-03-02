@@ -19,6 +19,13 @@ enum GrantType: String {
 }
 
 class LoginManager {
+   
+   // TODO: Need to be refactor
+   //       1. Move credentials in Keychain
+   //       2. Refactor Alamofire request
+   //       3. Review Singleton implementation
+   //       4. Parameters and Credentials move to proper class
+   
    let createToken: String = "/api/oauth/token"
    var client_credentials = [
       "client_id": "016c2177d2534dd1746cbcf8d0953de8d5833bcffdee5491ed993d1132b14b97",
@@ -75,19 +82,21 @@ class LoginManager {
             return
          }
          
-         self.fbUserData.get() { (user, error) in
-            guard error == nil else {
-               completionHandler(nil, error!)
-               return
-            }
-            
-            self.FBLoginRequest(user: user!, completionHandler: { (response) in
-               if response["success"] == true {
-                  completionHandler(response, nil)
-               } else {
-                  completionHandler(response, nil)
+         if response?.grantedPermissions != nil {
+            self.fbUserData.get() { (user, error) in
+               guard error == nil else {
+                  completionHandler(nil, error!)
+                  return
                }
-            })
+            
+               self.FBLoginRequest(user: user!, completionHandler: { (response) in
+                  if response["success"] == true {
+                     completionHandler(response, nil)
+                  } else {
+                     completionHandler(response, nil)
+                  }
+               })
+            }
          }
       }
    }
