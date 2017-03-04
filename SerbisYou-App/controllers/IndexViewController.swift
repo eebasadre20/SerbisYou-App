@@ -17,22 +17,28 @@ class IndexViewController: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
     }
    
+
+    @IBOutlet weak var addressLabel: UILabel!
    @IBOutlet weak var mapView: GMSMapView!
-   var locationManager: CLLocationManager!
+
    let defaults = UserDefaults.standard
    var authCredential: UserAuthentication!
+   
+   var locationManager = CLLocationManager()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self
-        mapView.delegate = self
-      
-        currentUser()
+        initializeLocationManager()
    }
 
+   private func initializeLocationManager() {
+      locationManager.delegate = self
+      locationManager.desiredAccuracy = kCLLocationAccuracyBest
+      locationManager.requestWhenInUseAuthorization()
+      mapView.delegate = self
+      self.mapView.bringSubview(toFront: addressLabel)
+   }
    
     func reverseGeocoderCoordinate(_ coordinate: CLLocationCoordinate2D) {
         
@@ -42,20 +48,13 @@ class IndexViewController: UIViewController {
             
             if let address = response?.firstResult() {
                 let lines = address.lines! as [String]
-                
-//                self.addressLabel.text = lines.joined(separator: "\n")
+                self.addressLabel.text = lines.joined(separator: "\n")
                
                 UIView.animate(withDuration: 0.25, animations: {
                     self.view.layoutIfNeeded()
                 }) 
             }
         }
-    }
-    
-    func currentUser() {
-      if (self.authCredential != nil) {
-        //  currentUserLbl.text = self.authCredential.Email.components(separatedBy: "@").first
-      }
     }
 }
 
@@ -64,7 +63,6 @@ extension IndexViewController: CLLocationManagerDelegate {
    @objc func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
       if status == .authorizedWhenInUse {
          locationManager.startUpdatingLocation()
-         
          mapView.isMyLocationEnabled = true
          mapView.settings.myLocationButton = true
       }
@@ -72,10 +70,12 @@ extension IndexViewController: CLLocationManagerDelegate {
    
    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       if let location = locations.first {
-         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-         locationManager.stopUpdatingLocation()
+         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15, bearing: 0, viewingAngle: 0)
+         mapView.camera = camera
       }
    }
+   
+   
 }
 
 extension IndexViewController: GMSMapViewDelegate {

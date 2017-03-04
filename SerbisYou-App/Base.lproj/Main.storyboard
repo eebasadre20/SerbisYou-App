@@ -120,13 +120,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-LD-I0z" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-LD-I0z" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0m-IB-Zbp">
+                                        <rect key="frame" x="41" y="450" width="292" height="72"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29745708626760564" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="47a-UC-YBS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S0m-IB-Zbp" secondAttribute="bottom" constant="81" id="13g-jZ-fW9"/>
+                                    <constraint firstAttribute="trailing" secondItem="S0m-IB-Zbp" secondAttribute="trailing" constant="42" id="JSe-Ij-A5s"/>
+                                    <constraint firstItem="S0m-IB-Zbp" firstAttribute="leading" secondItem="rWB-LD-I0z" secondAttribute="leading" constant="41" id="PK2-Zr-k2b"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rWB-LD-I0z" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" id="199-7L-3Da"/>
+                            <constraint firstItem="rWB-LD-I0z" firstAttribute="bottom" secondItem="ePR-m6-fTg" secondAttribute="top" id="5Tb-jg-nDn"/>
+                            <constraint firstAttribute="trailing" secondItem="rWB-LD-I0z" secondAttribute="trailing" id="7M8-4A-rxv"/>
+                            <constraint firstItem="rWB-LD-I0z" firstAttribute="leading" secondItem="1ME-GG-SHw" secondAttribute="leading" id="zyz-eb-JFs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ToP-tJ-1p0">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="91N-PT-x3o">
@@ -136,6 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressLabel" destination="S0m-IB-Zbp" id="V4G-fA-tg3"/>
                         <outlet property="mapView" destination="rWB-LD-I0z" id="XRE-Bp-baI"/>
                     </connections>
                 </viewController>
