@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="2124" y="315"/>
         </scene>
-        <!--Index View Controller-->
+        <!--Title-->
         <scene sceneID="UQg-kY-ef1">
             <objects>
                 <viewController storyboardIdentifier="IndexView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VHv-yk-9WR" customClass="IndexViewController" customModule="SerbisYou_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,62 +120,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoZ-4h-De3">
-                                <rect key="frame" x="162" y="33" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0P-L6-eAp">
-                                <rect key="frame" x="306" y="29" width="52" height="30"/>
-                                <state key="normal" title="Log out"/>
-                                <connections>
-                                    <action selector="didTapLogout:" destination="VHv-yk-9WR" eventType="touchUpInside" id="Duj-FV-U5I"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-ww-9cE">
-                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-U5-vA6">
-                                <rect key="frame" x="10" y="26" width="100" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="EnR-jc-RGG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bug-cO-bao" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="67" width="375" height="571"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-LD-I0z" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="bug-cO-bao" firstAttribute="top" secondItem="L0P-L6-eAp" secondAttribute="bottom" constant="8" id="1d7-kY-0nC"/>
-                            <constraint firstItem="Clf-U5-vA6" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="6" id="3HB-6e-HIF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L0P-L6-eAp" secondAttribute="trailing" constant="-3" id="LVF-SP-2wA"/>
-                            <constraint firstItem="Clf-U5-vA6" firstAttribute="leading" secondItem="1ME-GG-SHw" secondAttribute="leading" constant="10" id="Qgw-46-x5G"/>
-                            <constraint firstItem="AoZ-4h-De3" firstAttribute="centerX" secondItem="1ME-GG-SHw" secondAttribute="centerX" id="Ub0-2x-kM5"/>
-                            <constraint firstItem="L0P-L6-eAp" firstAttribute="top" secondItem="jtL-qC-O9p" secondAttribute="bottom" constant="9" id="Wkm-Kd-5B5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dmc-ww-9cE" secondAttribute="trailing" constant="-20" id="X1T-Ku-1ek"/>
-                            <constraint firstItem="dmc-ww-9cE" firstAttribute="top" secondItem="bug-cO-bao" secondAttribute="bottom" constant="8" id="a5K-Xg-jbo"/>
-                            <constraint firstItem="dmc-ww-9cE" firstAttribute="leading" secondItem="1ME-GG-SHw" secondAttribute="leadingMargin" constant="-20" id="enn-Th-V5Y"/>
-                            <constraint firstItem="ePR-m6-fTg" firstAttribute="top" secondItem="dmc-ww-9cE" secondAttribute="bottom" id="ztm-h9-fx2"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ToP-tJ-1p0">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="91N-PT-x3o">
+                            <connections>
+                                <action selector="didTapLogout:" destination="VHv-yk-9WR" id="EcC-We-z9g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="addressLabel" destination="dmc-ww-9cE" id="54O-UH-7b8"/>
-                        <outlet property="currentUserLbl" destination="Clf-U5-vA6" id="FXd-Ak-9Lg"/>
-                        <outlet property="mapView" destination="bug-cO-bao" id="20n-UH-E1U"/>
+                        <outlet property="mapView" destination="rWB-LD-I0z" id="XRE-Bp-baI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdD-aN-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="314"/>
+            <point key="canvasLocation" x="2892" y="313.49325337331339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Cz-Vm-GyN">

@@ -51,7 +51,7 @@ class AuthViewController: UIViewController, UserLoginDelegate, UserSignUpDelegat
             if response["success"] == true {
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "IndexView")
-               self.present(homeViewController, animated: true, completion: nil)
+               self.navigationController!.pushViewController(homeViewController, animated: true)
             } else {
                let errorAlert = UIAlertController(title: "SerbisYou", message: "Something error message", preferredStyle: UIAlertControllerStyle.alert)
                

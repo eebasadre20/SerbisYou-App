@@ -11,22 +11,20 @@ import GoogleMaps
 
 class IndexViewController: UIViewController {
     let loginManager = LoginManager.sharedloginInstance
-   
-    @IBAction func didTapLogout(_ sender: AnyObject) {
-      loginManager.logout()
-      self.dismiss(animated: true, completion: nil)
+
+    @IBAction func didTapLogout(_ sender: Any) {
+        loginManager.logout()
+        _ = self.navigationController?.popViewController(animated: true)
     }
    
-   @IBOutlet weak var currentUserLbl: UILabel!
    @IBOutlet weak var mapView: GMSMapView!
-   @IBOutlet weak var addressLabel: UILabel!
-    
    var locationManager: CLLocationManager!
    let defaults = UserDefaults.standard
    var authCredential: UserAuthentication!
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
         locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
@@ -45,8 +43,8 @@ class IndexViewController: UIViewController {
             if let address = response?.firstResult() {
                 let lines = address.lines! as [String]
                 
-                self.addressLabel.text = lines.joined(separator: "\n")
-                
+//                self.addressLabel.text = lines.joined(separator: "\n")
+               
                 UIView.animate(withDuration: 0.25, animations: {
                     self.view.layoutIfNeeded()
                 }) 
@@ -56,7 +54,7 @@ class IndexViewController: UIViewController {
     
     func currentUser() {
       if (self.authCredential != nil) {
-         currentUserLbl.text = self.authCredential.Email.components(separatedBy: "@").first
+        //  currentUserLbl.text = self.authCredential.Email.components(separatedBy: "@").first
       }
     }
 }
