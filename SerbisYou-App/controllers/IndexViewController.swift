@@ -8,9 +8,12 @@
 
 import UIKit
 import GoogleMaps
+import Alamofire
+
 
 class IndexViewController: UIViewController {
     let loginManager = LoginManager.sharedloginInstance
+    let googleDirection = GoogleDirection.sharedInstance
 
     @IBAction func didTapLogout(_ sender: Any) {
         loginManager.logout()
@@ -72,6 +75,7 @@ extension IndexViewController: CLLocationManagerDelegate {
       if let location = locations.first {
          let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15, bearing: 0, viewingAngle: 0)
          mapView.camera = camera
+         locationManager.stopUpdatingLocation()
       }
    }
    
