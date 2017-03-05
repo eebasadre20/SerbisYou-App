@@ -13,6 +13,7 @@
 		981184E51E59E596006C365A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E31E59E596006C365A /* AuthManager.swift */; };
 		981184E61E59E596006C365A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981184E41E59E596006C365A /* LoginManager.swift */; };
 		984E45C91E6700C100ADC3DA /* FBUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E45C81E6700C100ADC3DA /* FBUserData.swift */; };
+		989AD8F51E6C54F700145123 /* GoogleDirectionApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989AD8F41E6C54F700145123 /* GoogleDirectionApiManager.swift */; };
 		BDC3C6FA7306A5675ED5B85B /* Pods_SerbisYou_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */; };
 		C929FD921DD5CF2300B497E8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929FD911DD5CF2300B497E8 /* AuthViewController.swift */; };
 		C929FD961DD5CFCD00B497E8 /* LoginWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */; };
@@ -67,6 +68,7 @@
 		981184E41E59E596006C365A /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		982EE00E1E607CAA00ED70C7 /* SerbisYou-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SerbisYou-App.entitlements"; sourceTree = "<group>"; };
 		984E45C81E6700C100ADC3DA /* FBUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUserData.swift; sourceTree = "<group>"; };
+		989AD8F41E6C54F700145123 /* GoogleDirectionApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDirectionApiManager.swift; sourceTree = "<group>"; };
 		C75BA9E6445F74717D78D572 /* Pods_SerbisYou_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerbisYou_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C929FD911DD5CF2300B497E8 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C929FD941DD5CFCD00B497E8 /* LoginWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWidget.xib; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				981184E31E59E596006C365A /* AuthManager.swift */,
 				981184E41E59E596006C365A /* LoginManager.swift */,
+				989AD8F41E6C54F700145123 /* GoogleDirectionApiManager.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				C97AD5ED1DC30143001209E0 /* IndexViewController.swift in Sources */,
 				981184E61E59E596006C365A /* LoginManager.swift in Sources */,
 				C929FDA01DD5D0DC00B497E8 /* LoginWidget.swift in Sources */,
+				989AD8F51E6C54F700145123 /* GoogleDirectionApiManager.swift in Sources */,
 				C96CAC901DFD988900B38D9F /* SignUpWdget.swift in Sources */,
 				C96CAC8A1DFD890900B38D9F /* LoginWdget.swift in Sources */,
 				981184E51E59E596006C365A /* AuthManager.swift in Sources */,
